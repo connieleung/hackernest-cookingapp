@@ -2,7 +2,7 @@
 $(document).ready(function($) {
 	var socket = io.connect('http://build.kiwiwearables.com:8080');
 
-	var threshold = 600;
+	var threshold = 9;
 	var detectArrayCounter = 0;
 	var isDetect = 0;
 	var dontCheck = 0;
@@ -22,7 +22,7 @@ $(document).ready(function($) {
 		// //DTW detection system
 		var dtw = DTW(kiwi_data);
 		var total = dtw.total;
-//		console.log( total );
+		//console.log( total );
 
 		if ((total >= threshold) && (dontCheck == 0)) {
 			detectArrayCounter++;
@@ -38,7 +38,7 @@ $(document).ready(function($) {
 					detectArrayCounter = 0;
 					dontCheck = 0;
 //					$('#detect').toggleClass("detect-off");
-				},1500);
+				},500);
 			}
 		}
 
