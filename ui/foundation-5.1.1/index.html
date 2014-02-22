@@ -8,8 +8,10 @@
     <link rel="stylesheet" href="css/foundation.css" />
     <link rel="stylesheet" href="css/foundation.min.css" />
     <link rel="stylesheet" href="css/normalize.css" />
-    <link rel="stylesheet" type="text/css" href="css/default.css" />
-    <link rel="stylesheet" type="text/css" href="css/component.css" />
+    <link rel="stylesheet" type="text/css" href="css/nest/default.css" />
+    <link rel="stylesheet" type="text/css" href="css/nest/component.css" />
+    <link rel="stylesheet" href="css/custom.css" />
+
     <script src="js/vendor/modernizr.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
   </head>
@@ -293,7 +295,8 @@
         <article class="#ingredients-panel-background" style="background: url('http://placehold.it/400x240&text=[Make]');">
    
         <h3><a name="#start-whisking">Start Whisking</a></h3>
-   
+        <h6 class="uppercase">Tools Used</h6>
+        <hr />
           <div class="row">
             <div class="large-6 columns">
               <ul>
@@ -307,9 +310,9 @@
               </li>
               <li><img src="http://placehold.it/30x30" /></li>
             </ul>  
-               <div class="demo" >
-                  <p>Set whisking time</p>
+               <div class="knob-counter" >
                   <!-- See http://anthonyterrien.com/knob/ for more info -->
+                  <!-- need help! knob counter not working -->
                   <input type="text" class="knob" data-width="500" data-displayInput=false value="35" data-thickness=".4" data-fgColor="chartreuse" data-readOnly=true >
                   <script>
                     $(function() {
