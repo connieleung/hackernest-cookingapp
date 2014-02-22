@@ -1,43 +1,48 @@
 
-var motionData = {
-	knead: {
+var motionData = [
+	{
+		name: 'knead',
 		threshold: 36,
 		bufferSize: 30,
 		greaterThan: false,
-		timeBetweenMotions: 0,
+		timeBetweenMotions: 500,
 		sumA: [],
 		sumG: [1,1]
 	},
-	roll: {
+	{
+		name: 'roll',
 		threshold: 0,
 		bufferSize: 0,
 		greaterThan: true,
-		timeBetweenMotions: 0,
+		timeBetweenMotions: 500,
 		sumA: [],
 		sumG: []
 	},
-	whisk: {
-		threshold: 0,
-		bufferSize: 0,
+	{
+		name: 'whisk',
+		threshold: 9,
+		bufferSize: 10,
 		greaterThan: true,
-		timeBetweenMotions: 0,
+		timeBetweenMotions: 500,
 		sumA: [],
 		sumG: []
 	},
-	chop: {
-		threshold: 0,
-		bufferSize: 0,
+	{
+		name: 'chop',
+		threshold: 2.5,
+		bufferSize: 10,
 		greaterThan: true,
-		timeBetweenMotions: 0,
+		timeBetweenMotions: 500,
 		sumA: [],
 		sumG: []
 	},
-	sift: {
+	{
+		name: 'sift',
 		threshold: 0,
 		bufferSize: 0,
 		greaterThan: true,
-		timeBetweenMotions: 0,
+		timeBetweenMotions: 500,
 		sumA: [],
 		sumG: []
 	}
-};
+];

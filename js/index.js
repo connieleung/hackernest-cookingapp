@@ -5,13 +5,13 @@ $(document).ready(function($) {
 	var detectArrayCounter = 0;
 	var dontCheck = 0;
 
-	var motionDetected = function( motionObject, motionName ) {
+	var motionDetected = function( motion ) {
 
-		if ( detectArrayCounter >= motionObject.bufferSize ) {
+		if ( detectArrayCounter >= motion.bufferSize ) {
 
 			// Tell the user what they did, track it, etc.
-			console.log( motionName );
-			$('#detect').text( motionName );
+			console.log( motion.name );
+			$('#detect').text( motion.name );
 
 			dontCheck = 1;
 
@@ -19,14 +19,14 @@ $(document).ready(function($) {
 				detectArrayCounter = 0;
 				dontCheck = 0;
 //					$('#detect').toggleClass("detect-off");
-			}, motionObject.timeBetweenMotions );
+			}, motion.timeBetweenMotions );
 		}
 
 	};
 
 	socket.on( 'connect', function() {
 		socket.emit( 'listen', { device_id: '44', password: '123' } );
-	});
+	} );
 
 	socket.on( 'listen_response', function( data ) {
 
@@ -34,9 +34,9 @@ $(document).ready(function($) {
 		var dtw, total, thisMotion;
 //		console.log( kiwi_data );
 
-		Object.keys( motionData ).forEach( function( motion ) {
+		for ( var i = 0; i < motionData.length; i++ ) {
 
-			thisMotion = motionData[ motion ];
+			thisMotion = motionData[i];
 
 			dtw = DTW( kiwi_data, thisMotion.sumA, thisMotion.sumG );
 			total = dtw.total;
@@ -54,19 +54,16 @@ $(document).ready(function($) {
 				}
 			}
 
-		} );
+		}
 
 //		console.log(kiwi_data); // Kiwi sensor data is a JSON object
 
-		var packet_type = kiwi_data.packet_type;
+//		var packet_type = kiwi_data.packet_type;
 
 	// Capture accelerometer and gyroscope data, or tap motion events
 	// 00 = raw sensor data
 	// 03 = motion events
 
-		var acceleration_x = kiwi_data.ax;
-		var acceleration_y = kiwi_data.ay;
-		var acceleration_z = kiwi_data.az;
 	});
 
 });
