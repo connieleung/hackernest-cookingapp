@@ -2,7 +2,7 @@
 $(document).ready(function($) {
 	var socket = io.connect('http://build.kiwiwearables.com:8080');
 
-	var threshold = 3;
+	var threshold = 600;
 	var detectArrayCounter = 0;
 	var isDetect = 0;
 	var dontCheck = 0;
@@ -17,13 +17,14 @@ $(document).ready(function($) {
 	socket.on('listen_response', function(data) {
 
 		var kiwi_data = JSON.parse(data.message);
+//		console.log( kiwi_data );
 
 		// //DTW detection system
 		var dtw = DTW(kiwi_data);
 		var total = dtw.total;
-		console.log( total );
+//		console.log( total );
 
-		if ((total <= threshold) && (dontCheck == 0)) {
+		if ((total >= threshold) && (dontCheck == 0)) {
 			detectArrayCounter++;
 
 			//only count a motion if 10 predictions are counted
