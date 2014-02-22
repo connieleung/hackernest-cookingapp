@@ -2,57 +2,68 @@
 $(document).ready(function($) {
 	var socket = io.connect('http://build.kiwiwearables.com:8080');
 
-	var threshold = 9;
 	var detectArrayCounter = 0;
-	var isDetect = 0;
 	var dontCheck = 0;
-	var bufferSize = 10;
-	var start;
 
+	var motionDetected = function( motion ) {
 
-	socket.on('connect', function() {
-		socket.emit('listen', {device_id: '44', password: '123'});
-	});
+		if ( detectArrayCounter >= motion.bufferSize ) {
 
-	socket.on('listen_response', function(data) {
+			// Tell the user what they did, track it, etc.
+			console.log( motion.name );
+			$('#detect').text( motion.name );
 
-		var kiwi_data = JSON.parse(data.message);
+			dontCheck = 1;
+
+			setTimeout( function() {
+				detectArrayCounter = 0;
+				dontCheck = 0;
+//					$('#detect').toggleClass("detect-off");
+			}, motion.timeBetweenMotions );
+		}
+
+	};
+
+	socket.on( 'connect', function() {
+		socket.emit( 'listen', { device_id: '44', password: '123' } );
+	} );
+
+	socket.on( 'listen_response', function( data ) {
+
+		var kiwi_data = JSON.parse( data.message );
+		var dtw, total, thisMotion;
 //		console.log( kiwi_data );
 
-		// //DTW detection system
-		var dtw = DTW(kiwi_data);
-		var total = dtw.total;
-		//console.log( total );
+		for ( var i = 0; i < motionData.length; i++ ) {
 
-		if ((total >= threshold) && (dontCheck == 0)) {
-			detectArrayCounter++;
+			thisMotion = motionData[i];
 
-			//only count a motion if 10 predictions are counted
-			if(detectArrayCounter >= bufferSize){
-				isDetect++;
-				start = new Date().getTime();
-				$('#detect').text( parseInt( $( '#detect' ).text() ) + 1 );
-				dontCheck = 1;
+			dtw = DTW( kiwi_data, thisMotion.sumA, thisMotion.sumG );
+			total = dtw.total;
 
-				setTimeout(function(){
-					detectArrayCounter = 0;
-					dontCheck = 0;
-//					$('#detect').toggleClass("detect-off");
-				},500);
+			if ( thisMotion.greaterThan && dontCheck == 0 ) {
+				if ( total >= thisMotion.threshold ) {
+					detectArrayCounter++;
+					motionDetected( thisMotion );
+				}
 			}
+			else {
+				if ( total <= thisMotion.threshold ) {
+					detectArrayCounter++;
+					motionDetected( thisMotion );
+				}
+			}
+
 		}
 
 //		console.log(kiwi_data); // Kiwi sensor data is a JSON object
 
-		var packet_type = kiwi_data.packet_type;
+//		var packet_type = kiwi_data.packet_type;
 
 	// Capture accelerometer and gyroscope data, or tap motion events
 	// 00 = raw sensor data
 	// 03 = motion events
 
-		var acceleration_x = kiwi_data.ax;
-		var acceleration_y = kiwi_data.ay;
-		var acceleration_z = kiwi_data.az;
 	});
 
 });
