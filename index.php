@@ -7,6 +7,7 @@
 	<script src="js/index.js"></script>
 </head>
 <body>
-<div id="detect"></div>
+<div id="detect">0</div>
+<div id="no-detect">0</div>
 </body>
 </html>

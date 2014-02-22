@@ -4,138 +4,184 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Foundation | Welcome</title>
+    <title>Team ISIS</title>
     <link rel="stylesheet" href="css/foundation.css" />
     <link rel="stylesheet" href="css/foundation.min.css" />
     <link rel="stylesheet" href="css/normalize.css" />
-    <link rel="stylesheet" type="text/css" href="css/nest/default.css" />
-    <link rel="stylesheet" type="text/css" href="css/nest/component.css" />
+    <link rel="stylesheet" type="text/css" href="css/default.css" />
+    <link rel="stylesheet" type="text/css" href="css/component.css" />
     <script src="js/vendor/modernizr.js"></script>
   </head>
   <body>
 
   <!-- Nav Bar -->
  
-  <div class="row">
+  <div class="row" style="border: 1px solid purple;">
     <div class="large-12 columns">
       <div class="nav-bar right">
        <ul class="button-group">
          <li><a href="#" class="button">Home</a></li>
          <li><a href="#" class="button">Recipes</a></li>
-         <li><a href="#" class="button">Link 3</a></li>
+         <li><a href="#" class="button">Search Ingredients</a></li>
          <li><a href="#" class="button">Link 4</a></li>
         </ul>
       </div>
-      <h1>Blog <small>This is my blog. It's awesome.</small></h1>
+      <h1>Team ISIS <small>HackerNest 2014</small></h1>
       <hr />
     </div>
   </div>
  
   <!-- End Nav -->
- 
- 
-  <!-- Main Page Content and Sidebar -->
- 
+  
   <div class="row">
+
+  <!-- End Header, Body, Footer -->
 
     <!-- Sidebar -->
  
     <aside class="large-3 columns">
- 
-      <h5>Ingredients</h5>
 
-      <!-- Ingredients Panel -->
+      <ul id="cbp-ntaccordion" class="cbp-ntaccordion" style="border: 1px solid purple;">  <li>
 
-      <ul class="side-nav" style="border: 1px solid purple; ">
-        
-        <section class="side-nav-part-a">
-          <h4>A</h4>
-            <li>1/4 c sugar</li>
-            <li>2 1/2 c flour</li>
-            <li>4 tsps baking powder</li>
-            <li>1/4 tsp baking soda</li>
-        </section>
+          <!-- Recipe Header -->
 
-        <section class="side-nav-part-a">
-          <h4>B</h4>
-            <li>1 c sour cream</li>
-            <li>2 large eggs</li>
-            <li>1 tsp vanilla</li>
-        </section>
+          <div class="recipe-header">
+            <a href=""></a><h3>Challah</h3>
+          </div>
+          
+          
+          <!-- End Recipe Title -->
 
-      </ul>
- 
-      <!-- End Ingredients Panel -->
+          <!-- Ingredients Panel -->
 
-      <!-- Cooking Tools Used -->
+          <h5>Ingredients</h5>
 
-      <ul>
-        <li><img src="http://placehold.it/30x30" /></li>
-        <li><img src="http://placehold.it/30x30" /></li>
-        <li><img src="http://placehold.it/30x30" /></li>
-      </ul>      
+          <ul class="side-nav" style="border: 1px solid purple; ">
+            
+            <section class="side-nav-part-a">
+              <h4>A</h4>
+                <li>1/4 c sugar</li>
+                <li>2 1/2 c flour</li>
+                <li>4 tsps baking powder</li>
+                <li>1/4 tsp baking soda</li>
+            </section>
 
-      <!-- End Cooking Tools Used -->
+            <section class="side-nav-part-a">
+              <h4>B</h4>
+                <li>1 c sour cream</li>
+                <li>2 large eggs</li>
+                <li>1 tsp vanilla</li>
+            </section>
 
-      <!-- Recipe Directions / Instructions -->
+          </ul>
+     
+          <!-- End Ingredients Panel -->
 
-      <ul id="cbp-ntaccordion" class="cbp-ntaccordion" style="background-color: red;">
-        
-        <!-- Step 01 -->
+          <!-- Cooking Tools Used -->
 
-        <li>
-          <h3 class="cbp-nttrigger">Heat<!-- Oat cake tootsie roll --></h3>
-          <div class="cbp-ntcontent">
-            <p><!-- summary of recipe not here : right panel --></p>
+          <ul>
+            <li><img src="http://placehold.it/30x30" /></li>
+            <li><img src="http://placehold.it/30x30" /></li>
+            <li><img src="http://placehold.it/30x30" /></li>
+          </ul>      
 
-            <!-- Sub-Step 01 : Detailed Directions -->
+          <!-- End Cooking Tools Used -->
+
+          <hr />
+
+          <!-- * NestedAccordion Starts * -->
+
+            <!-- Recipe Directions / Instructions -->
 
             <ul class="cbp-ntsubaccordion">
-              <li>
-                <h4 class="cbp-nttrigger">Detailed Directions<!-- Donut pastry --></h4>
-                <div class="cbp-ntcontent"><!-- ... --></div>
-              </li>
-              <li>
-                <h4 class="cbp-nttrigger">Detailed Directions<!-- Carrot cake --></h4>
-                <div class="cbp-ntcontent">
-                  <!-- ... -->
-                
-                <ul class="cbp-ntsubaccordion">
-                  <li>
-                    <h5 class="cbp-nttrigger"><!-- Donut pastry --></h5>
-                    <div class="cbp-ntcontent"><!-- ... --></div>
-                  </li>
-                  <li><!-- ... --></li>
-                  <li><!-- ... --></li>
-                </ul>
-                </div>
-              </li>
-              
-              <!-- Sub-Step 03 : Detailed Directions -->
+
+            <!-- Header Tag & Detailed Directions -->
+
+              <!-- Step 01 : Detailed Directions -->
 
               <li>
-                <h4 class="cbp-nttrigger">Tootsie roll marshmallow</h4>
+                <h4 class="cbp-nttrigger">Add Mix<!-- Donut pastry --></h4>
                 <div class="cbp-ntcontent">
-                    <!-- ... -->
+                  <ul class="cbp-ntsubaccordion">
+                    <li>Add B mixture to A mixture</li>
+                    <li>Mix until moistened</li>
+                    <li>Turn onto floured surface</li>
+                  </ul>
                 </div>
               </li>
+
+              <!-- End Step 01 : Detailed Directions -->
+
+              <!-- Step 02 : Detailed Directions -->
+
+              <li>
+                <h4 class="cbp-nttrigger">Knead<!-- Carrot cake --></h4>
+                <div class="cbp-ntcontent">
+                  <p>Knead 19 times</p>
+                </div>
+              </li>
+
+              <!-- End Step 02 : Detailed Directions -->
+
+              <!-- Step 03 : Detailed Directions -->
+
+              <li>
+                <h4 class="cbp-nttrigger">Roll<!-- Carrot cake --></h4>
+                <div class="cbp-ntcontent">
+                  <p>Onto about a 9 inch square</p>
+                </div>
+              </li>
+
+              <!-- End Step 03 : Detailed Directions -->
+
+              <!-- Step 04 : Detailed Directions -->
+
+              <li>
+                <h4 class="cbp-nttrigger">Cut<!-- Donut pastry --></h4>
+                <div class="cbp-ntcontent">
+                  <ul class="cbp-ntsubaccordion">
+                    <li>Cut with a glass dipped in flour</li>
+                    <li>Place on UNGREASED cookie sheet</li>
+                  </ul>
+                </div>
+              </li>
+
+              <!-- End Step 04 : Detailed Directions -->
+
+              <!-- Step 04 : Detailed Directions -->
+
+              <li>
+                <h4 class="cbp-nttrigger">Bake<!-- Carrot cake --></h4>
+                <div class="cbp-ntcontent">
+                  <p>350&deg;F 12 minutes or until golden brown</p>
+                </div>
+              </li>
+
+              <!-- Step 04 : Detailed Directions -->
+
+            <!-- End Header Tag & Detailed Directions -->
+
             </ul>
-          </div>
+
+            <!-- End Recipe Directions / Instructions -->
+          
+          <!-- * NestedAccordion Starts * -->
+
         </li>
-        <li><!-- ... --></li>
-        <li><!-- ... --></li>
-        <li><!-- ... --></li>
       </ul>
- 
-       <!-- End Recipe Directions / Instructions -->
+   
+      <!-- End Recipe Directions / Instructions -->
 
     </aside>
  
     <!-- End Sidebar -->
- 
-    <!-- Main Blog Content -->
+
+    <!-- Main Page Content -->
+
     <div class="large-9 columns" role="content">
  
+     <!-- Recipe Header -->
+
       <article>
  
         <h3><a href="#">Blog Post Title</a></h3>
@@ -151,34 +197,16 @@
           </div>
         </div>
  
-        <p>Pork drumstick turkey fugiat. Tri-tip elit turducken pork chop in. Swine short ribs meatball irure bacon nulla pork belly cupidatat meatloaf cow. Nulla corned beef sunt ball tip, qui bresaola enim jowl. Capicola short ribs minim salami nulla nostrud pastrami. Nulla corned beef sunt ball tip, qui bresaola enim jowl. Capicola short ribs minim salami nulla nostrud pastrami.</p>
+        <p>Salami cow jowl ham, fatback sirloin tail ball tip andouille. Ham hock landjaeger beef ribs tenderloin, brisket chicken ground round kevin tongue shoulder. Meatloaf fatback pancetta venison, t-bone chicken cow salami ground round. Boudin filet mignon capicola swine short ribs salami. Meatball shoulder ribeye, kevin corned beef shank ham. Pork loin capicola turkey, jerky tail beef ball tip</p>
  
-        <p>Pork drumstick turkey fugiat. Tri-tip elit turducken pork chop in. Swine short ribs meatball irure bacon nulla pork belly cupidatat meatloaf cow. Nulla corned beef sunt ball tip, qui bresaola enim jowl. Capicola short ribs minim salami nulla nostrud pastrami.</p>
- 
+        <div class="panel">
+          <h5>Featured</h5>
+          <p>Pork drumstick turkey fugiat. Tri-tip elit turducken pork chop in. Swine short ribs meatball irure bacon nulla pork belly cupidatat meatloaf cow.</p>
+          <a href="#">Read More →</a>
+        </div>
       </article>
  
       <hr />
- 
-      <article>
- 
-        <h3><a href="#">Blog Post Title</a></h3>
-        <h6>Written by <a href="#">John Smith</a> on August 12, 2012.</h6>
- 
-        <div class="row">
-          <div class="large-6 columns">
-            <p>Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong. Eiusmod swine spare ribs reprehenderit culpa.</p>
-            <p>Boudin aliqua adipisicing rump corned beef. Nulla corned beef sunt ball tip, qui bresaola enim jowl. Capicola short ribs minim salami nulla nostrud pastrami.</p>
-          </div>
-          <div class="large-6 columns">
-            <img src="http://placehold.it/400x240&text=[img]" />
-          </div>
-        </div>
- 
-        <p>Pork drumstick turkey fugiat. Tri-tip elit turducken pork chop in. Swine short ribs meatball irure bacon nulla pork belly cupidatat meatloaf cow. Nulla corned beef sunt ball tip, qui bresaola enim jowl. Capicola short ribs minim salami nulla nostrud pastrami. Nulla corned beef sunt ball tip, qui bresaola enim jowl. Capicola short ribs minim salami nulla nostrud pastrami.</p>
- 
-        <p>Pork drumstick turkey fugiat. Tri-tip elit turducken pork chop in. Swine short ribs meatball irure bacon nulla pork belly cupidatat meatloaf cow. Nulla corned beef sunt ball tip, qui bresaola enim jowl. Capicola short ribs minim salami nulla nostrud pastrami.</p>
- 
-      </article>
  
     </div>
  
@@ -209,11 +237,44 @@
       </div>
     </div>
   </footer>
-    
+
+  <!-- End Header, Body, Footer -->
+
+  <!-- JavaScript -->
+
+    <!-- Zurb Foundation JS -->
+
     <script src="js/vendor/jquery.js"></script>
     <script src="js/foundation.min.js"></script>
+
+
     <script>
       $(document).foundation();
+    </script>    
+
+    <!-- End Zurb Foundation JS -->
+
+    <!-- NestedAccordion JS -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="js/nest/jquery.cbpNTAccordion.min.js"></script>
+    <script>
+      $( function() {
+        /*
+        - how to call the plugin:
+        $( selector ).cbpNTAccordion( [options] );
+        - destroy:
+        $( selector ).cbpNTAccordion( 'destroy' );
+        */
+
+        $( '#cbp-ntaccordion' ).cbpNTAccordion();
+
+      } );
     </script>
+
+    <!-- * End NestedAccordion JS -->
+
+  <!-- End JavaScript -->
+
   </body>
 </html>
