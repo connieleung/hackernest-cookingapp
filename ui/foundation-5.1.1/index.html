@@ -41,6 +41,8 @@
  
     <aside class="large-3 columns">
 
+      <!-- NestedAccordion -->
+      <!-- http://tympanus.net/Blueprints/NestedAccordion/ -->
       <ul id="cbp-ntaccordion" class="cbp-ntaccordion" style="border: 1px solid purple;">
 
           <!-- Recipe Header -->
@@ -57,6 +59,7 @@
           <div class="ingredients-panel">
             <a href="#ingredients-panel">
               <h5>Ingredients</h5>
+            </a>
 
               <ul class="side-nav" style="border: 1px solid purple; ">
                 
@@ -77,18 +80,20 @@
                 </section>
 
               </ul>
-            </a>
+            
           </div>
      
           <!-- End Ingredients Panel -->
 
           <!-- Cooking Tools Used -->
 
-          <ul>
-            <li><img src="http://placehold.it/30x30" /></li>
-            <li><img src="http://placehold.it/30x30" /></li>
-            <li><img src="http://placehold.it/30x30" /></li>
-          </ul>      
+          <div class="cooking-tools">
+              <ul>
+                <li><a href="#cooking-tools"><img src="http://placehold.it/30x30" /></a></li>
+                <li><a href="#cooking-tools"><img src="http://placehold.it/30x30" /></a></li>
+                <li><a href="#cooking-tools"><img src="http://placehold.it/30x30" /></a></li>
+              </ul>      
+          </div>
 
           <!-- End Cooking Tools Used -->
 
@@ -206,7 +211,8 @@
       <!-- End Recipe Directions / Instructions -->
 
     </aside>
- 
+
+    <!-- End NestedAccordion -->
     <!-- End Sidebar -->
 
     <!-- Main Page Content -->
@@ -242,7 +248,7 @@
 
     <!-- End Recipe Header -->
 
-    <!--Ingredients Panel -->
+    <!-- Ingredients Panel -->
 
       <a name="#ingredients-panel">
         <article class="#ingredients-panel-background" style="background: url('http://placehold.it/400x240&text=[Ingredients]');">
@@ -255,11 +261,58 @@
               <li><img src="http://placehold.it/30x30" /></li>
             </ul>   
           </div>
-          
+
         </article>
       </a>
       
-     <!-- End Recipe Header -->
+     <!-- End Ingredients Panel -->
+
+    <!-- Cooking Tools -->
+
+      <a name="#cooking-tools">
+        <article class="#ingredients-panel-background" style="background: url('http://placehold.it/400x240&text=[Cooking Tools]');">
+   
+          <div class="panel">
+            <h5>Cooking Icons?</h5>
+            <ul>
+              <li><img src="http://placehold.it/30x30" /></li>
+              <li><img src="http://placehold.it/30x30" /></li>
+              <li><img src="http://placehold.it/30x30" /></li>
+            </ul>   
+          </div>
+
+        </article>
+      </a>
+      
+     <!-- End Ingredients Panel -->
+
+    <!-- Right Panel - Step 01 : Detailed Directions -->
+
+      <a name="#cooking-tools">
+        <article class="#ingredients-panel-background" style="background: url('http://placehold.it/400x240&text=[Make]');">
+   
+        <h3><a name="#start-whisking">Start Whisking</a></h3>
+   
+          <div class="row">
+            <div class="large-6 columns">
+              <p>In a large bowl, whisk together the yeast and 1/4 cup of the flour</p>
+            </div>
+            <div class="large-6 columns">
+              <img src="http://placehold.it/400x240&text=[img]" />
+            </div>
+          </div>
+   
+          <p>Salami cow jowl ham, fatback sirloin tail ball tip andouille. Ham hock landjaeger beef ribs tenderloin, brisket chicken ground round kevin tongue shoulder. Meatloaf fatback pancetta venison, t-bone chicken cow salami ground round. Boudin filet mignon capicola swine short ribs salami. Meatball shoulder ribeye, kevin corned beef shank ham. Pork loin capicola turkey, jerky tail beef ball tip</p>
+   
+          <div class="panel">
+            <h5>Sub-Title</h5>
+            <p>Make delicious Challah</p>
+            <!-- <a href="#">Read More →</a> -->
+          </div>
+        </article>
+      </a>
+      
+     <!-- End Ingredients Panel -->
  
     </div>
  
