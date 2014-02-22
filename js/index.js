@@ -1,4 +1,4 @@
-
+/*global $:false, jQuery:false, console:false */
 $(document).ready(function($) {
 	var socket = io.connect('http://build.kiwiwearables.com:8080');
 
