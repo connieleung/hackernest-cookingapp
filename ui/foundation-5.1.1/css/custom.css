@@ -36,12 +36,30 @@ article {
 	background-size: 500px 700px;
 }
 
-#ingredients-panel-background {
-	background: url('http://placehold.it/300&text=[Ingredients]');
-}
 #recipe-article-header-background {
 	background: url('http://placehold.it/300&text=[]');
 }
-#cover-up-background {
-	background: url('http://placehold.it/300&text==[Cover-Up Now]');
+
+#ingredients-panel-background {
+	background: url('http://placehold.it/300&text=[Ingredients]');
+}
+
+#cooking-tools-background {
+	background: url('http://placehold.it/300&text=[Cooking Tools]');
+}
+
+#start-whisking-background {
+	background: url('http://placehold.it/300&text=[Start-Whisking]');
+}
+
+#wait-uncover-background {
+	background: url('http://placehold.it/300&text=[Wait While Uncovered]');
+}
+
+#whisk-to-dissolve-background {
+	background: url('http://placehold.it/300&text=[Whisk to Dissolve]');
+}
+
+#shaggy-ball-background {
+	background: url('http://placehold.it/300&text=[Make a Shaggy Ball]');
 }
