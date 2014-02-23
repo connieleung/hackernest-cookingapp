@@ -6,10 +6,11 @@
     </style>
 	<script src="js/socket.io.js"></script>
 	<script src="js/jquery-2.1.0.min.js"></script>
+	<script src="js/api.js"></script>
 	<script src="js/data.js"></script>
 	<script src="js/dtw.js"></script>
 <!--	<script src="js/custom.js"></script>-->
-	<script src="js/index.js"></script>
+<!--	<script src="js/index.js"></script>-->
 	<style>
 		span {
 			display:block;
