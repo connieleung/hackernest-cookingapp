@@ -10,21 +10,17 @@ $( document ).ready( function( $ ) {
 	var motionDetected = function( motion ) {
 
 		if ( motion.detectArrayCounter >= motion.bufferSize ) {
-
-			// Tell the user what they did, track it, etc.
-
-//			$( '.knob' ).val( 10 ).trigger( 'change' );
-
 			console.log( motion.name );
 			motion.domCount.val(parseInt( motion.domCount.val() ) + 1).trigger('change');
-            //motion.domCount.trigger('change');
+
+            if (motion.domCount.attr('data-max') && parseInt(motion.domCount.val()) >= parseInt(motion.domCount.attr('data-max')))
+                isis.donePanel = true;
 
 			checkMotion = false;
 
 			setTimeout( function() {
 				motion.detectArrayCounter = 0;
 				checkMotion = true;
-//					$('#detect').toggleClass("detect-off");
 			}, motion.timeBetweenMotions );
 		}
 
@@ -63,31 +59,26 @@ $( document ).ready( function( $ ) {
                 }
             }
         });
-		//for ( var i = 0; i < motionData.length; i++ ) {
-
-		//	thisMotion = motionData[i];
 
         if (!thisMotion)
             return;
 
-			dtw = DTW( kiwi_data, thisMotion );
-			total = dtw.total;
-            thisMotion.domScore.text( total );
+        dtw = DTW( kiwi_data, thisMotion );
+        total = dtw.total;
+        thisMotion.domScore.text( total );
 
-			if ( thisMotion.greaterThan ) {
-				if ( total >= thisMotion.threshold && checkMotion ) {
-					thisMotion.detectArrayCounter++;
-					motionDetected( thisMotion );
-				}
-			}
-			else {
-				if ( total <= thisMotion.threshold && checkMotion ) {
-					thisMotion.detectArrayCounter++;
-					motionDetected( thisMotion );
-				}
-			}
-
-		//}
+        if ( thisMotion.greaterThan ) {
+            if ( total >= thisMotion.threshold && checkMotion ) {
+                thisMotion.detectArrayCounter++;
+                motionDetected( thisMotion );
+            }
+        }
+        else {
+            if ( total <= thisMotion.threshold && checkMotion ) {
+                thisMotion.detectArrayCounter++;
+                motionDetected( thisMotion );
+            }
+        }
 
 //		console.log(kiwi_data); // Kiwi sensor data is a JSON object
 
