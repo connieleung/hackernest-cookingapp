@@ -1,9 +1,10 @@
 /*global $:false, jQuery:false, console:false */
-$(document).ready(function($) {
-	var socket = io.connect('http://build.kiwiwearables.com:8080');
+$( document ).ready( function( $ ) {
+	var socket = io.connect( 'http://build.kiwiwearables.com:8080' );
 
 	var detectArrayCounter = 0;
-	var dontCheck = 0;
+//	var dontCheck = 0;
+	var checkMotion = true;
 
 	var motionDetected = function( motion ) {
 
@@ -13,11 +14,12 @@ $(document).ready(function($) {
 			console.log( motion.name );
 			$('#detect').text( motion.name );
 
-			dontCheck = 1;
-
+//			dontCheck = 1;
+			checkMotion = false;
 			setTimeout( function() {
 				detectArrayCounter = 0;
-				dontCheck = 0;
+//				dontCheck = 0;
+				checkMotion = true;
 //					$('#detect').toggleClass("detect-off");
 			}, motion.timeBetweenMotions );
 		}
@@ -64,6 +66,6 @@ $(document).ready(function($) {
 	// 00 = raw sensor data
 	// 03 = motion events
 
-	});
+	} );
 
-});
+} );

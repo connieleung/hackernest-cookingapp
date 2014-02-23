@@ -11,8 +11,8 @@ var motionData = [
 	},
 	{
 		name: 'roll',
-		threshold: 0,
-		bufferSize: 0,
+		threshold: 2.5,
+		bufferSize: 20,
 		greaterThan: true,
 		timeBetweenMotions: 500,
 		sumA: [],
@@ -38,8 +38,8 @@ var motionData = [
 	},
 	{
 		name: 'sift',
-		threshold: 0,
-		bufferSize: 0,
+		threshold: 10,
+		bufferSize: 10,
 		greaterThan: true,
 		timeBetweenMotions: 500,
 		sumA: [],
