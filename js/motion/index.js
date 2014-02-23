@@ -11,10 +11,10 @@ $( document ).ready( function( $ ) {
             if ( motion.name == isis.nextMotion ) {
                 $('#panel-' + isis.activePanel + ' .next').trigger('click');
             } else {
-                motion.domCount.val(parseInt( motion.domCount.val() ) + 1);
+                motion.domCount.val(parseInt( motion.domCount.val() ) + 1).trigger('change');
                 motion.domCount.parents('article.panel').find('.start').hide();
                 motion.domCount.parents('article.panel').find('.error').hide();
-                if (motion.domCount.attr('data-max') && parseInt(motion.domCount.val()) > parseInt(motion.domCount.attr('data-max'))) {
+                if (motion.domCount.attr('data-max') && parseInt(motion.domCount.val()) >= parseInt(motion.domCount.attr('data-max'))) {
                     isis.donePanel = true;
                     motion.domCount.trigger('configure', {'bgColor': '#95b13c'}).trigger('configure', {'fgColor': '#95b13c'});
                 }
