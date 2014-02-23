@@ -131,6 +131,11 @@ article {
 	border-color: white;
 }
 
+.cbp-ntsubaccordion {
+list-style: none;
+margin-bottom: 4em;
+}
+
 /*-- Header CSS --*/
 
 #isis-header-div {
@@ -291,8 +296,42 @@ display: block;
 	display:none;
 }
 
+a.next {
+background-color: #95b13c !important;
+padding: 10px 15px;
+margin-right: 0 !important;
+margin-top: 0 !important;
+display: inline-block;
+text-transform: none;
+font-weight: bold;
+color: white !important;
+letter-spacing: 0.1em;
+position: absolute;
+bottom: 1em;
+right: 1em;
+text-shadow: 1px 1px 2px rgba(0,0,0,0.25);
+border: 1px solid rgba(0,0,0,0.25);
+}
+
+.panel #panel-sift a.next
+background-color: #95b13c !important;
+padding: 10px 15px;
+margin-right: 0 !important;
+margin-top: 0 !important;
+display: inline-block;
+text-transform: none;
+font-weight: bold;
+color: white !important;
+letter-spacing: 0.1em;
+position: absolute;
+bottom: 1em;
+right: 1em;
+text-shadow: 1px 1px 2px rgba(0,0,0,0.25);
+border: 1px solid rgba(0,0,0,0.25);
+}
+
 .panel a.next {
-background-color: #95b13c;
+background-color: #95b13c !important;
 padding: 10px 15px;
 margin-right: 0 !important;
 margin-top: 0 !important;
