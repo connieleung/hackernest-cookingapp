@@ -1,6 +1,9 @@
-<img src="http://placehold.it/350x150" />
- style="border: 1px solid purple; 
+/* <img src="http://placehold.it/350x150" />
+ style="border: 1px solid purple;  */
 
+article {
+	height: 700px;
+}
 
  .uppercase {
  	text-transform: uppercase;
@@ -14,3 +17,15 @@
 	background-position: center center;
 	background-repeat: no-repeat;
 }
+
+
+/* NestedAccordion Side Menu*/
+
+.cbp-ntaccordion {
+	color: gray;
+}
+
+#cbp-ntaccordion {
+	color: gray;
+}
+
