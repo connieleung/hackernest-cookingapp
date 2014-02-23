@@ -1,5 +1,7 @@
-/* <img src="http://placehold.it/350x150" />
- style="border: 1px solid purple;  */
+html body {
+	
+}
+
 
 article {
 	height: 700px;
@@ -34,14 +36,163 @@ article {
 	background-position: top center;
 	background-repeat: repeat;
 	background-size: 500px 700px;
+
+}
+
+.article-title {
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 25px;
+	font-weight: bolder;
+	letter-spacing: 0.25em;
+	color: #151515;
+}
+
+/* feature text in articles */
+
+.recipe-feature-text {
+	float: right;
+	padding: 10px;
+	margin-right: 10px;
+	bottom: 0;
+}
+
+#recipe-article-header-background {
+	background: url('http://placehold.it/300&text=[]');
 }
 
 #ingredients-panel-background {
 	background: url('http://placehold.it/300&text=[Ingredients]');
 }
-#recipe-article-header-background {
-	background: url('http://placehold.it/300&text=[]');
+
+#cooking-tools-background {
+	background: url('http://placehold.it/300&text=[Cooking Tools]');
 }
-#cover-up-background {
-	background: url('http://placehold.it/300&text==[Cover-Up Now]');
+
+#start-whisking-background {
+	background: url('http://placehold.it/300&text=[Start-Whisking]');
+}
+
+#wait-uncover-background {
+	background: url('http://placehold.it/300&text=[Wait While Uncovered]');
+}
+
+#whisk-to-dissolve-background {
+	background: url('http://placehold.it/300&text=[Whisk to Dissolve]');
+}
+
+#shaggy-ball-background {
+	background: url('http://placehold.it/300&text=[Make a Shaggy Ball]');
+}
+
+/*-- Accordian CSS --*/
+
+#cbp-ntaccordion {
+	background-color: #ffc273;
+	padding: 0.5em;
+}
+
+#cbp-ntaccordion > div.ingredients-panel {
+	background-color: #ffefda;
+	padding: 1em;
+	border: 1px solid #ffac40;
+}
+
+.cbp-ntaccordion h5 {
+	color: black;
+}
+
+.cbp-ntaccordion h3 {
+	color: white;
+	padding: 0.25em 0;
+	font-weight: 600;
+	border-bottom: 1px solid white;
+	text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+#cbp-ntaccordion > hr {
+	border-color: white;
+}
+
+/*-- Header CSS --*/
+
+#isis-header-div {
+	background-color: #ffac40;
+}
+
+#isis-header-div hr {
+	border-color: #a62d00;
+}
+
+#isis-header-div .isis-foods-nocircle-whisk-nocircle {
+	color: white;
+	text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+#isis-header-div h1 {
+	font-weight: 600;
+	color: white;
+	text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+#isis-header-div h1 small {
+	color: #a62d00;
+	text-shadow: none;
+}
+
+/*-- Info Window CSS --*/
+
+.article-background {
+	background-color: #ffefda;
+}
+
+#isis-head-side {
+	background-color: #ffc273;
+}
+
+.article-background a {
+	color: black;
+	font-weight: 600;
+}
+
+/*-- Cooking Tool List Items --*/
+
+#cbp-ntaccordion > div.cooking-tools li:first-child {
+	margin-left: 0em;
+}
+
+#cbp-ntaccordion > div.cooking-tools li {
+	float: left;
+	margin-right: 0.5em;
+	margin-bottom: 0.5em;
+	list-style: none;
+	background: url('http://placehold.it/300&text=[Knead into a Ball]');
+}
+
+#dryout-overnight-background {
+	background: url('http://placehold.it/300&text=[Overnight & Rise]');
+}
+
+#two-inch-divide-by-three {
+	background: url('http://placehold.it/300&text=[Divide by Three]');	
+}
+
+#cover-loaf-background {
+	background: url();
+}
+
+.cover-loaf-egg-salt-background {
+
+}
+
+.325F-preheat-background {
+
+}
+
+.45m-bake {
+
+}
+
+.baked-cooling-background {
+
 }

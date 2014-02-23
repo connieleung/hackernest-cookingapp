@@ -19,14 +19,14 @@
 
   <!-- Nav Bar -->
  
-  <div class="row" style="border: 1px solid purple;">
+  <div class="row" id="isis-header-div">
+    <a href="#top"></a>
     <div class="large-12 columns">
       <div class="nav-bar right">
        <ul class="button-group">
          <li><a href="#" class="button">Home</a></li>
          <li><a href="#" class="button">Recipes</a></li>
          <li><a href="#" class="button">Ingredients</a></li>
-         <li><a href="#" class="button">Link 4</a></li>
         </ul>
       </div>
       <h1><span class="isis-foods-nocircle-whisk-nocircle"></span> Team ISIS <small>HackerNest 2014</small></h1>
@@ -36,17 +36,17 @@
  
   <!-- End Nav -->
   
-  <div class="row">
+  <div class="row" id="isis-head-side">
 
   <!-- End Header, Body, Footer -->
 
     <!-- Sidebar -->
  
-    <aside class="large-4 columns">
+    <aside class="large-4 small-3 columns">
 
       <!-- NestedAccordion -->
       <!-- http://tympanus.net/Blueprints/NestedAccordion/ -->
-      <ul id="cbp-ntaccordion" class="cbp-ntaccordion" style="border: 1px solid purple;">
+      <ul id="cbp-ntaccordion" class="cbp-ntaccordion">
 
           <!-- Recipe Header -->
 
@@ -64,7 +64,7 @@
               <h5>Ingredients</h5>
             </a>
 
-              <ul class="side-nav" style="border: 1px solid purple; ">
+              <ul class="side-nav">
                 
                 <section class="side-nav-part-a">
                   <h4>A</h4>
@@ -116,9 +116,9 @@
                 <h4 class="cbp-nttrigger">Make<!-- Donut pastry --></h4>
                 <div class="cbp-ntcontent">
                   <ul class="cbp-ntsubaccordion">
-                    <li><a href="#start-whisking">In a large bowl, whisk together the yeast and 1/4 cup of the flour</li>
-                    <li></a>Whisk in the warm water until smooth</a></li>
-                    <li><a href="#cover-up">Let the yeast slurry stand uncovered for 15 minutes</a></li>
+                    <li><a href="#start-whisking">In a large bowl, whisk together the yeast and 1/4 cup of the flour</a></li>
+                    <li><a href="#start-whisking">Whisk in the warm water until smooth</a></li>
+                    <li><a href="#wait-uncover">Let the yeast slurry stand uncovered for 15 minutes</a></li>
                   </ul>
                 </div>
               </li>
@@ -131,9 +131,9 @@
                 <h4 class="cbp-nttrigger">Mix &amp; Knead<!-- Carrot cake --></h4>
                 <div class="cbp-ntcontent">
                   <ul class="cbp-ntsubaccordion">
-                    <li><a href="#whisk-to-dissolve">Whisk the 3 eggs, salt, oil and honey into the yeast slurry until the eggs are well incorporated and the salt has dissolved</li>
-                    <li>With a wooden spoon, stir in the remaining 3 1/4 cups flour all at once</li>
-                    <li>When the mixture is a shaggy ball, scrape it out onto your work surface and knead for about 10 minutes</li>
+                    <li><a href="#whisk-to-dissolve">Whisk the 3 eggs, salt, oil and honey into the yeast slurry until the eggs are well incorporated and the salt has dissolved</a></li>
+                    <li><a href="#whisk-to-dissolve">With a wooden spoon, stir in the remaining 3 1/4 cups flour all at once</a></li>
+                    <li><a href="#shaggy-ball">When the mixture is a shaggy ball, scrape it out onto your work surface and knead for about 10 minutes</a></li>
                     <p>Note:</p>
                     <li>This dough is very firm – don’t worry if it’s cracked and hard to knead, it’ll work out</li>
                   </ul>
@@ -145,11 +145,11 @@
               <!-- Step 03 : Detailed Directions -->
 
               <li>
-                <h4 class="cbp-nttrigger">1st Proof<!-- Carrot cake --></h4>
+                <h4 class="cbp-nttrigger">Overnight<!-- Carrot cake --></h4>
                 <div class="cbp-ntcontent">
                   <ul class="cbp-ntsubaccordion">
-                    <li>Place the dough in a deep, greased bowl and cover it with plastic wrap (don’t use a towel, it will just dry out)</li>
-                    <li>Let the dough rise overnight</li>
+                    <li><a href="#dryout-overnight">Place the dough in a deep, greased bowl and cover it with plastic wrap (don’t use a towel, it will just dry out)</a></li>
+                    <li><a href="#dryout-overnight">Let the dough rise overnight</a></li>
                   </ul>
                 </div>
               </li>
@@ -163,43 +163,45 @@
                 <div class="cbp-ntcontent">
                   <ul class="cbp-ntsubaccordion">
                     <p>Next morning:</p>
-                    <li>Divide the dough into three equal parts (the shape will be prettier if the sections are as equal as possible)</li>
-                    <li>Roll each section out into a long strand, until it’s about 1.5 to 2 inches thick</li>
+                    <li><a href="#two-inch-divide-by-three">Divide the dough into three equal parts (the shape will be prettier if the sections are as equal as possible)</a></li>
+                    <li><a href="#two-inch-divide-by-three">Roll each section out into a long strand, until it’s about 1.5 to 2 inches thick</a></li>
                   </ul>
                 </div>
               </li>
 
               <!-- End Step 04 : Detailed Directions -->
 
-              <!-- Step 04 : Detailed Directions -->
+              <!-- Step 05 : Detailed Directions -->
 
               <li>
-                <h4 class="cbp-nttrigger">2nd Proof<!-- Carrot cake --></h4>
+                <h4 class="cbp-nttrigger">Cover Loaf<!-- Carrot cake --></h4>
                 <div class="cbp-ntcontent">
                   <ul class="cbp-ntsubaccordion">
-                    <li>Cover the loaf with plastic wrap and let proof about an hour total (the bread rises a lot in the oven, so don’t worry if it hasn’t risen much)</li>
-                    <li>After about half an hour, or 30 minutes before baking, preheat the oven to 325°F</li>
-                    <li>Before you put the bread in the oven, beat the last egg with a pinch of salt for the glaze and brush it on. Sprinkle sesame seeds on top if you like</li>
+                    <li><a href="#cover-loaf">Cover the loaf with plastic wrap and let proof about an hour total (the bread rises a lot in the oven, so don’t worry if it hasn’t risen much)</a></li>
+                    <li><a href="#cover-loaf-egg-salt">Beat the last egg with a pinch of salt for the glaze and brush it on. Sprinkle sesame seeds on top if you like</a></li>
+                    <li><a href="#325F-preheat">After about half an hour, or 30 minutes before baking, preheat the oven to 325°F</a></li>
+                    
                   </ul>
                  </div>
               </li>
 
-              <!-- Step 04 : Detailed Directions -->
+              <!-- Step 05 : Detailed Directions -->
 
-              <!-- Step 04 : Detailed Directions -->
+              <!-- Step 06 : Detailed Directions -->
 
               <li>
                 <h4 class="cbp-nttrigger">Bake!<!-- Carrot cake --></h4>
                 <div class="cbp-ntcontent">
                   <ul class="cbp-ntsubaccordion">
-                    <li>Bake bread for about 45 minutes, until very well browned</li>
-                    <li>Don’t be fooled if it looks ready after 30 minutes, because it has a tendency to have a doughy uncooked bit in the centre if you don’t bake it long enough</li>
-                    <li>Place it on a rack to cool for a few minutes before serving</li>
+                    <li><a href="#45m-bake">Bake bread for about 45 minutes, until very well browned</a></li>
+                    <li><a href="#baked-cooling">Place it on a rack to cool for a few minutes before serving</a></li>
+                    <p>Note:</p>
+                    <li>Don’t be fooled if it looks ready after 30 minutes, because it has a tendency to have a doughy uncooked bit in the centre if you don’t bake it long enough</a></li>
                   </ul>
                  </div>
               </li>
 
-              <!-- Step 04 : Detailed Directions -->
+              <!-- Step 06 : Detailed Directions -->
 
             <!-- End Header Tag & Detailed Directions -->
 
@@ -220,32 +222,22 @@
 
     <!-- Main Page Content -->
 
-    <div class="large-8 columns" role="content">
+    <div class="large-8 small-9 columns" role="content">
  
      <!-- Recipe Header -->
 
       <a name="recipe-header">
-        <article class="article-background" id="recipe-article-header-background">
+        <article class="article-background" class="recipe-article-header-background">
    
-          <h3><a href="#">Blog Post Title</a></h3>
           <h6>Written by <a href="#">John Smith</a> on August 12, 2012.</h6>
    
           <div class="row">
             <div class="large-6 columns">
-              <p>Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong. Eiusmod swine spare ribs reprehenderit culpa.</p>
+              <div class="panel" class="recipe-feature-text">
+              <h5>Sub-Title</h5>
+              <p>Make delicious Challah</p>
             </div>
-            <!-- <div class="large-6 columns">
-              <img src="http://placehold.it/400x240&text=[img]" />
-            </div> -->
-          </div>
-   
-          <p>Salami cow jowl ham, fatback sirloin tail ball tip andouille. Ham hock landjaeger beef ribs tenderloin, brisket chicken ground round kevin tongue shoulder. Meatloaf fatback pancetta venison, t-bone chicken cow salami ground round. Boudin filet mignon capicola swine short ribs salami. Meatball shoulder ribeye, kevin corned beef shank ham. Pork loin capicola turkey, jerky tail beef ball tip</p>
-   
-          <div class="panel">
-            <h5>Sub-Title</h5>
-            <p>Make delicious Challah</p>
-            <!-- <a href="#">Read More →</a> -->
-          </div>
+          </div>    
         </article>
       </a>
 
@@ -254,7 +246,7 @@
     <!-- Ingredients Panel -->
 
       <a name="#ingredients-panel">
-        <article class="article-background" id="ingredients-panel-background" style="background: url('http://placehold.it/400x240&text=[Ingredients]');">
+        <article class="article-background" class="ingredients-panel-background">
    
           <div class="panel">
             <h5>Ingredients Icons?</h5>
@@ -273,11 +265,10 @@
     <!-- Cooking Tools -->
 
       <a name="#cooking-tools">
-        <article class="#ingredients-panel-background" style="background: url('http://placehold.it/400x240&text=[Cooking Tools]');">
+        <article class="article-background" class="cooking-tools-background">
    
           <div class="panel">
-            <h5><a name="#cooking-tools">
-Cooking Icons</a></h5>
+            <h5><a name="#cooking-tools">Cooking Icons</a></h5>
             <ul>
               <li><img src="http://placehold.it/30x30" /></li>
               <li><img src="http://placehold.it/30x30" /></li>
@@ -298,7 +289,7 @@ Cooking Icons</a></h5>
     <!-- Right Panel - Step 01/A : Detailed Directions -->
 
       <a name="#start-whisking">
-        <article class="#ingredients-panel-background" style="background: url('http://placehold.it/400x240&text=[Start-Whisking]');">
+        <article class="article-background" class="start-whisking-background">
    
         <h3><a name="#start-whisking">Start Whisking</a></h3>
         <h6 class="uppercase">Tools Used</h6>
@@ -307,12 +298,12 @@ Cooking Icons</a></h5>
             <div class="large-6 columns">
               <ul>
               <li>
-                <span class="isis-foods-nocircle-bowls-nocircle:before"></span>
-                <span class="isis-foods-nocircle-bowls-nocircle:after"></span>
+                <span class="isis-foods-nocircle-bowls-nocircle"></span>
+                <span class="isis-foods-nocircle-bowls-nocircle"></span>
               </li>
               <li>
-                <span class="isis-foods-whisk:before"></span>
-                <span class="isis-foods-whisk:after"></span>
+                <span class="isis-foods-whisk"></span>
+                <span class="isis-foods-whisk"></span>
               </li>
               <li><img src="http://placehold.it/30x30" /></li>
             </ul>  
@@ -342,9 +333,9 @@ Cooking Icons</a></h5>
  
     <!-- Right Panel - Step 01/B : Cover-up - Detailed Directions -->
 
-      <a name="#cover-up">
-        <article id="cover-up-background">
-        <h3><a name="#cover-up">Cover-up Now</a></h3>
+      <a name="#wait-uncover">
+        <article class="article-background" class="wait-uncover-background">
+        <h3><a name="#wait-uncover">Wait While Uncovered</a></h3>
         <hr />
           <div class="row">
             <div class="large-6 columns">
@@ -371,10 +362,10 @@ Cooking Icons</a></h5>
       
     <!-- End Right Panel - Step 01/B : Cover-up - Detailed Directions -->
 
-    <!-- Right Panel - Step 01/B : Cover-up - Detailed Directions -->
+    <!-- Right Panel - Step 02/A : Whisk to Dissolve - Detailed Directions -->
 
       <a name="#whisk-to-dissolve">
-        <article class="#ingredients-panel-background" style="background: url('http://placehold.it/400x240&text=[Whisk]');">
+        <article class="article-background" class="whisk-to-dissolve-background">
    
         <h3><a name="#whisk-to-dissolve">Start Whisking</a></h3>
         <hr />
@@ -401,7 +392,266 @@ Cooking Icons</a></h5>
         </article>
       </a>
       
-    <!-- End Right Panel - Step 01/B : Cover-up - Detailed Directions -->
+    <!-- End Right Panel - Step 02/A : Whisk to Dissolve - Detailed Directions -->
+
+    <!-- Right Panel - Step 02/B : Knead into a Ball - Detailed Directions -->
+
+      <a name="#shaggy-ball">
+        <article class="article-background" class="shaggy-ball-background">
+   
+        <h3><a name="#shaggy-ball">Knead into a Ball</a></h3>
+        <hr />
+          <div class="row">
+            <div class="large-6 columns">
+               <div class="knob-counter" >
+                  <!-- See http://anthonyterrien.com/knob/ for more info -->
+                  <!-- need help! knob counter not working -->
+                  <!-- pre-start counter time: 0s, task duration: 15m -->
+                  <input type="text" class="knob" data-width="500" data-displayInput=false value="35" data-thickness=".4" data-fgColor="chartreuse" data-readOnly=true >
+                  <script>
+                    $(function() {
+                        $(".dial").knob();
+                    });
+                  </script>
+                  <!-- ding sound when time is up -->
+                </div>
+              </div>
+          </div>
+   
+          <div class="panel">
+            <a href="#top"><h5>Next Step</h5></a>
+          </div>
+        </article>
+      </a>
+      
+    <!-- End Right Panel - Step 02/B : Knead into a Ball - Detailed Directions -->
+
+    <!-- Right Panel - Step 03 : Overnight & Rise - Detailed Directions -->
+
+      <a name="#dryout-overnight">
+        <article class="article-background" class="dryout-overnight-background">
+   
+        <h3><a name="#dryout-overnight">Knead into a Ball</a></h3>
+        <hr />
+          <div class="row">
+            <div class="large-6 columns">
+               <div class="knob-counter" >
+                  <!-- See http://anthonyterrien.com/knob/ for more info -->
+                  <!-- need help! knob counter not working -->
+                  <!-- pre-start counter time: 0s, task duration: 15m -->
+                  <input type="text" class="knob" data-width="500" data-displayInput=false value="35" data-thickness=".4" data-fgColor="chartreuse" data-readOnly=true >
+                  <script>
+                    $(function() {
+                        $(".dial").knob();
+                    });
+                  </script>
+                  <!-- ding sound when time is up -->
+                </div>
+              </div>
+          </div>
+   
+          <div class="panel">
+            <a href="#top"><h5>Next Step</h5></a>
+          </div>
+        </article>
+      </a>
+      
+    <!-- End Right Panel - Step 03 : Overnight & Rise - Detailed Directions -->
+
+    <!-- Right Panel - Step 04 : Divide by Three - Detailed Directions -->
+
+    <a name="#two-inch-divide-by-three">
+      <article class="article-background" class="two-inch-divide-by-three-background">
+ 
+      <h3><a name="#two-inch-divide-by-three">Divide by Three</a></h3>
+      <hr />
+        <div class="row">
+          <div class="large-6 columns">
+             <div class="knob-counter" >
+                <!-- See http://anthonyterrien.com/knob/ for more info -->
+                <!-- need help! knob counter not working -->
+                <!-- pre-start counter time: 0s, task duration: 15m -->
+                <input type="text" class="knob" data-width="500" data-displayInput=false value="35" data-thickness=".4" data-fgColor="chartreuse" data-readOnly=true >
+                <script>
+                  $(function() {
+                      $(".dial").knob();
+                  });
+                </script>
+                <!-- ding sound when time is up -->
+              </div>
+            </div>
+        </div>
+ 
+        <div class="panel">
+          <a href="#top"><h5>Next Step</h5></a>
+        </div>
+      </article>
+    </a>
+    
+    <!-- End Right Panel - Step 04 : Divide by Three - Detailed Directions -->
+
+    <!-- Right Panel - Step 05/A : Cover Loaf - Detailed Directions -->
+
+    <a name="#cover-loaf">
+      <article class="article-background" class="cover-loaf-background">
+ 
+      <h3><a name="#cover-loaf">Cover Loaf</a></h3>
+      <hr />
+        <div class="row">
+          <div class="large-6 columns">
+             <div class="knob-counter" >
+                <!-- See http://anthonyterrien.com/knob/ for more info -->
+                <!-- need help! knob counter not working -->
+                <!-- pre-start counter time: 0s, task duration: 15m -->
+                <input type="text" class="knob" data-width="500" data-displayInput=false value="35" data-thickness=".4" data-fgColor="chartreuse" data-readOnly=true >
+                <script>
+                  $(function() {
+                      $(".dial").knob();
+                  });
+                </script>
+                <!-- ding sound when time is up -->
+              </div>
+            </div>
+        </div>
+ 
+        <div class="panel">
+          <a href="#top"><h5>Next Step</h5></a>
+        </div>
+      </article>
+    </a>
+    
+    <!-- End Right Panel - Step 05/A : Cover Loaf - Detailed Directions -->
+
+        <!-- Right Panel - Step 05/B : Add Egg & Salt - Detailed Directions -->
+
+    <a name="#cover-loaf-egg-salt">
+      <article class="article-background" class="cover-loaf-egg-salt-background">
+ 
+      <h3><a name="#cover-loaf-egg-salt">Add Egg & Salt</a></h3>
+      <hr />
+        <div class="row">
+          <div class="large-6 columns">
+             <div class="knob-counter" >
+                <!-- See http://anthonyterrien.com/knob/ for more info -->
+                <!-- need help! knob counter not working -->
+                <!-- pre-start counter time: 0s, task duration: 15m -->
+                <input type="text" class="knob" data-width="500" data-displayInput=false value="35" data-thickness=".4" data-fgColor="chartreuse" data-readOnly=true >
+                <script>
+                  $(function() {
+                      $(".dial").knob();
+                  });
+                </script>
+                <!-- ding sound when time is up -->
+              </div>
+            </div>
+        </div>
+ 
+        <div class="panel">
+          <a href="#top"><h5>Next Step</h5></a>
+        </div>
+      </article>
+    </a>
+    
+    <!-- End Right Panel - Step 05/B : Add Egg & Salt - Detailed Directions -->
+
+        <!-- Right Panel - Step 05/C : Pre-heat 325F - Detailed Directions -->
+
+    <a name="#325F-preheat">
+      <article class="article-background" class="325F-preheat-background">
+ 
+      <h3><a name="#325F-preheat">Pre-heat 325&deg;F</a></h3>
+      <hr />
+        <div class="row">
+          <div class="large-6 columns">
+             <div class="knob-counter" >
+                <!-- See http://anthonyterrien.com/knob/ for more info -->
+                <!-- need help! knob counter not working -->
+                <!-- pre-start counter time: 0s, task duration: 15m -->
+                <input type="text" class="knob" data-width="500" data-displayInput=false value="35" data-thickness=".4" data-fgColor="chartreuse" data-readOnly=true >
+                <script>
+                  $(function() {
+                      $(".dial").knob();
+                  });
+                </script>
+                <!-- ding sound when time is up -->
+              </div>
+            </div>
+        </div>
+ 
+        <div class="panel">
+          <a href="#top"><h5>Next Step</h5></a>
+        </div>
+      </article>
+    </a>
+    
+    <!-- End Right Panel - Step 05/C : Pre-heat 325F - Detailed Directions -->
+
+    <!-- Right Panel - Step 06/A : Bake - Detailed Directions -->
+
+    <a name="#45m-bake">
+      <article class="article-background" class="45m-bake-background">
+ 
+      <h3><a name="#45m-bake">Bake!</a></h3>
+      <hr />
+        <div class="row">
+          <div class="large-6 columns">
+             <div class="knob-counter" >
+                <!-- See http://anthonyterrien.com/knob/ for more info -->
+                <!-- need help! knob counter not working -->
+                <!-- pre-start counter time: 0s, task duration: 15m -->
+                <input type="text" class="knob" data-width="500" data-displayInput=false value="35" data-thickness=".4" data-fgColor="chartreuse" data-readOnly=true >
+                <script>
+                  $(function() {
+                      $(".dial").knob();
+                  });
+                </script>
+                <!-- ding sound when time is up -->
+              </div>
+            </div>
+        </div>
+ 
+        <div class="panel">
+          <a href="#top"><h5>Next Step</h5></a>
+        </div>
+      </article>
+    </a>
+    
+    <!-- End Right Panel - Step 06/A : Bake - Detailed Directions -->
+
+   <!-- Right Panel - Step 06/B : Cooling - Detailed Directions -->
+
+    <a name="#baked-cooling">
+      <article class="article-background" class="baked-cooling-background">
+ 
+      <h3><a name="#baked-cooling">Cooling</a></h3>
+      <hr />
+        <div class="row">
+          <div class="large-6 columns">
+             <div class="knob-counter" >
+                <!-- See http://anthonyterrien.com/knob/ for more info -->
+                <!-- need help! knob counter not working -->
+                <!-- pre-start counter time: 0s, task duration: 15m -->
+                <input type="text" class="knob" data-width="500" data-displayInput=false value="35" data-thickness=".4" data-fgColor="chartreuse" data-readOnly=true >
+                <script>
+                  $(function() {
+                      $(".dial").knob();
+                  });
+                </script>
+                <!-- ding sound when time is up -->
+              </div>
+            </div>
+        </div>
+ 
+        <div class="panel">
+          <a href="#top"><h5>Next Step</h5></a>
+        </div>
+      </article>
+    </a>
+    
+    <!-- End Right Panel - Step 06/B : Cooling - Detailed Directions -->
+
+ 
+
 
     </div>
  
@@ -423,10 +673,9 @@ Cooking Icons</a></h5>
         </div>
         <div class="large-6 columns">
           <ul class="inline-list right">
-            <li><a href="#">Link 1</a></li>
-            <li><a href="#">Link 2</a></li>
-            <li><a href="#">Link 3</a></li>
-            <li><a href="#">Link 4</a></li>
+         <li><a href="#" class="button">Home</a></li>
+         <li><a href="#" class="button">Recipes</a></li>
+         <li><a href="#" class="button">Ingredients</a></li>
           </ul>
         </div>
       </div>
