@@ -2,7 +2,9 @@
 $( document ).ready( function( $ ) {
 	var socket = io.connect( 'http://build.kiwiwearables.com:8080' );
 
+    var thingToCheck = 'roll';
 	var checkMotion = true;
+    var thisMotion;
 
 	var motionDetected = function( motion ) {
 
@@ -10,7 +12,7 @@ $( document ).ready( function( $ ) {
 
 			// Tell the user what they did, track it, etc.
 			console.log( motion.name );
-			$( '#' + motion.name + ' .count' ).text( parseInt( $( '#' + motion.name + ' .count' ).text() ) + 1 );
+			motion.domCount.text( parseInt( motion.domCount.text() ) + 1 );
 
 			checkMotion = false;
 
@@ -23,27 +25,40 @@ $( document ).ready( function( $ ) {
 
 	};
 
+    $.each(motionData, function(index, motion) {
+        motion.domThreshold = $( '#' + motion.name + ' .threshold');
+        motion.domBuffer = $( '#' + motion.name + ' .buffer');
+        motion.domScore = $( '#' + motion.name + ' .score');
+        motion.domCount = $( '#' + motion.name + ' .count');
+
+        motion.domBuffer.text( motion.bufferSize );
+        motion.domThreshold.text( motion.threshold );
+    });
+
 	socket.on( 'connect', function() {
 		socket.emit( 'listen', { device_id: '44', password: '123' } );
 	} );
 
-    console.log('starting socket');
 	socket.on( 'listen_response', function( data ) {
+//        updateCount++;
 
 		var kiwi_data = JSON.parse( data.message );
 		var dtw, total, thisMotion;
 		//console.log( kiwi_data );
 
-		for ( var i = 0; i < motionData.length; i++ ) {
+        $.each(motionData, function(index, motion) {
+            if (motion.name == thingToCheck) {
+                thisMotion = motion;
+                return;
+            }
+        });
+		//for ( var i = 0; i < motionData.length; i++ ) {
 
-			thisMotion = motionData[i];
+			//thisMotion = motionData[i];
 
 			dtw = DTW( kiwi_data, thisMotion );
 			total = dtw.total;
-
-            if ($( '#' + thisMotion.name + ' .threshold').text().length == 0)
-			    $( '#' + thisMotion.name + ' .threshold' ).text( thisMotion.threshold );
-			//$( '#' + thisMotion.name + ' .score' ).text( total );
+            thisMotion.domScore.text( total );
 
 			if ( thisMotion.greaterThan ) {
 				if ( total >= thisMotion.threshold && checkMotion ) {
@@ -58,7 +73,7 @@ $( document ).ready( function( $ ) {
 				}
 			}
 
-		}
+		//}
 
 //		console.log(kiwi_data); // Kiwi sensor data is a JSON object
 

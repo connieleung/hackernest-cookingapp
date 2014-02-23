@@ -19,14 +19,14 @@
 
   <!-- Nav Bar -->
  
-  <div class="row" style="border: 1px solid purple;">
+  <div class="row" id="isis-header-div">
+    <a href="#top"></a>
     <div class="large-12 columns">
       <div class="nav-bar right">
        <ul class="button-group">
          <li><a href="#" class="button">Home</a></li>
          <li><a href="#" class="button">Recipes</a></li>
          <li><a href="#" class="button">Ingredients</a></li>
-         <li><a href="#" class="button">Link 4</a></li>
         </ul>
       </div>
       <h1><span class="isis-foods-nocircle-whisk-nocircle"></span> Team ISIS <small>HackerNest 2014</small></h1>
@@ -36,17 +36,17 @@
  
   <!-- End Nav -->
   
-  <div class="row">
+  <div class="row" id="isis-head-side">
 
   <!-- End Header, Body, Footer -->
 
     <!-- Sidebar -->
  
-    <aside class="large-4 columns">
+    <aside class="large-4 small-3 columns">
 
       <!-- NestedAccordion -->
       <!-- http://tympanus.net/Blueprints/NestedAccordion/ -->
-      <ul id="cbp-ntaccordion" class="cbp-ntaccordion" style="border: 1px solid purple;">
+      <ul id="cbp-ntaccordion" class="cbp-ntaccordion">
 
           <!-- Recipe Header -->
 
@@ -64,7 +64,7 @@
               <h5>Ingredients</h5>
             </a>
 
-              <ul class="side-nav" style="border: 1px solid purple; ">
+              <ul class="side-nav">
                 
                 <section class="side-nav-part-a">
                   <h4>A</h4>
@@ -222,32 +222,22 @@
 
     <!-- Main Page Content -->
 
-    <div class="large-8 columns" role="content">
+    <div class="large-8 small-9 columns" role="content">
  
      <!-- Recipe Header -->
 
       <a name="recipe-header">
-        <article class="article-background" id="recipe-article-header-background">
+        <article class="article-background" class="recipe-article-header-background">
    
-          <h3><a href="#">Blog Post Title</a></h3>
           <h6>Written by <a href="#">John Smith</a> on August 12, 2012.</h6>
    
           <div class="row">
             <div class="large-6 columns">
-              <p>Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong. Eiusmod swine spare ribs reprehenderit culpa.</p>
+              <div class="panel" class="recipe-feature-text">
+              <h5>Sub-Title</h5>
+              <p>Make delicious Challah</p>
             </div>
-            <!-- <div class="large-6 columns">
-              <img src="http://placehold.it/400x240&text=[img]" />
-            </div> -->
-          </div>
-   
-          <p>Salami cow jowl ham, fatback sirloin tail ball tip andouille. Ham hock landjaeger beef ribs tenderloin, brisket chicken ground round kevin tongue shoulder. Meatloaf fatback pancetta venison, t-bone chicken cow salami ground round. Boudin filet mignon capicola swine short ribs salami. Meatball shoulder ribeye, kevin corned beef shank ham. Pork loin capicola turkey, jerky tail beef ball tip</p>
-   
-          <div class="panel">
-            <h5>Sub-Title</h5>
-            <p>Make delicious Challah</p>
-            <!-- <a href="#">Read More →</a> -->
-          </div>
+          </div>    
         </article>
       </a>
 
@@ -256,7 +246,7 @@
     <!-- Ingredients Panel -->
 
       <a name="#ingredients-panel">
-        <article class="article-background" id="ingredients-panel-background">
+        <article class="article-background" class="ingredients-panel-background">
    
           <div class="panel">
             <h5>Ingredients Icons?</h5>
@@ -275,7 +265,7 @@
     <!-- Cooking Tools -->
 
       <a name="#cooking-tools">
-        <article class="article-background" id="cooking-tools-background">
+        <article class="article-background" class="cooking-tools-background">
    
           <div class="panel">
             <h5><a name="#cooking-tools">Cooking Icons</a></h5>
@@ -299,7 +289,7 @@
     <!-- Right Panel - Step 01/A : Detailed Directions -->
 
       <a name="#start-whisking">
-        <article class="article-background" id="start-whisking-background">
+        <article class="article-background" class="start-whisking-background">
    
         <h3><a name="#start-whisking">Start Whisking</a></h3>
         <h6 class="uppercase">Tools Used</h6>
@@ -308,12 +298,12 @@
             <div class="large-6 columns">
               <ul>
               <li>
-                <span class="isis-foods-nocircle-bowls-nocircle:before"></span>
-                <span class="isis-foods-nocircle-bowls-nocircle:after"></span>
+                <span class="isis-foods-nocircle-bowls-nocircle"></span>
+                <span class="isis-foods-nocircle-bowls-nocircle"></span>
               </li>
               <li>
-                <span class="isis-foods-whisk:before"></span>
-                <span class="isis-foods-whisk:after"></span>
+                <span class="isis-foods-whisk"></span>
+                <span class="isis-foods-whisk"></span>
               </li>
               <li><img src="http://placehold.it/30x30" /></li>
             </ul>  
@@ -344,7 +334,7 @@
     <!-- Right Panel - Step 01/B : Cover-up - Detailed Directions -->
 
       <a name="#wait-uncover">
-        <article class="article-background" id="wait-uncover-background">
+        <article class="article-background" class="wait-uncover-background">
         <h3><a name="#wait-uncover">Wait While Uncovered</a></h3>
         <hr />
           <div class="row">
@@ -375,7 +365,7 @@
     <!-- Right Panel - Step 02/A : Whisk to Dissolve - Detailed Directions -->
 
       <a name="#whisk-to-dissolve">
-        <article class="article-background" id="whisk-to-dissolve-background">
+        <article class="article-background" class="whisk-to-dissolve-background">
    
         <h3><a name="#whisk-to-dissolve">Start Whisking</a></h3>
         <hr />
@@ -407,7 +397,7 @@
     <!-- Right Panel - Step 02/B : Knead into a Ball - Detailed Directions -->
 
       <a name="#shaggy-ball">
-        <article class="article-background" id="shaggy-ball-background">
+        <article class="article-background" class="shaggy-ball-background">
    
         <h3><a name="#shaggy-ball">Knead into a Ball</a></h3>
         <hr />
@@ -439,7 +429,7 @@
     <!-- Right Panel - Step 03 : Overnight & Rise - Detailed Directions -->
 
       <a name="#dryout-overnight">
-        <article class="article-background" id="dryout-overnight-background">
+        <article class="article-background" class="dryout-overnight-background">
    
         <h3><a name="#dryout-overnight">Knead into a Ball</a></h3>
         <hr />
@@ -471,7 +461,7 @@
     <!-- Right Panel - Step 04 : Divide by Three - Detailed Directions -->
 
     <a name="#two-inch-divide-by-three">
-      <article class="article-background" id="two-inch-divide-by-three-background">
+      <article class="article-background" class="two-inch-divide-by-three-background">
  
       <h3><a name="#two-inch-divide-by-three">Divide by Three</a></h3>
       <hr />
@@ -498,14 +488,14 @@
       </article>
     </a>
     
-    <!-- End Right Panel - Step 04 :  - Detailed Directions -->
+    <!-- End Right Panel - Step 04 : Divide by Three - Detailed Directions -->
 
-    <!-- Right Panel - Step 0 : Divide by Three - Detailed Directions -->
+    <!-- Right Panel - Step 05/A : Cover Loaf - Detailed Directions -->
 
-    <a name="#">
-      <article class="article-background" id="-background">
+    <a name="#cover-loaf">
+      <article class="article-background" class="cover-loaf-background">
  
-      <h3><a name="#"></a></h3>
+      <h3><a name="#cover-loaf">Cover Loaf</a></h3>
       <hr />
         <div class="row">
           <div class="large-6 columns">
@@ -530,14 +520,14 @@
       </article>
     </a>
     
-    <!-- End Right Panel - Step 0 :  - Detailed Directions -->
+    <!-- End Right Panel - Step 05/A : Cover Loaf - Detailed Directions -->
 
-        <!-- Right Panel - Step 0 :  - Detailed Directions -->
+        <!-- Right Panel - Step 05/B : Add Egg & Salt - Detailed Directions -->
 
-    <a name="#">
-      <article class="article-background" id="-background">
+    <a name="#cover-loaf-egg-salt">
+      <article class="article-background" class="cover-loaf-egg-salt-background">
  
-      <h3><a name="#"></a></h3>
+      <h3><a name="#cover-loaf-egg-salt">Add Egg & Salt</a></h3>
       <hr />
         <div class="row">
           <div class="large-6 columns">
@@ -562,14 +552,14 @@
       </article>
     </a>
     
-    <!-- End Right Panel - Step 0 :  - Detailed Directions -->
+    <!-- End Right Panel - Step 05/B : Add Egg & Salt - Detailed Directions -->
 
-        <!-- Right Panel - Step 0 :  - Detailed Directions -->
+        <!-- Right Panel - Step 05/C : Pre-heat 325F - Detailed Directions -->
 
-    <a name="#">
-      <article class="article-background" id="-background">
+    <a name="#325F-preheat">
+      <article class="article-background" class="325F-preheat-background">
  
-      <h3><a name="#"></a></h3>
+      <h3><a name="#325F-preheat">Pre-heat 325&deg;F</a></h3>
       <hr />
         <div class="row">
           <div class="large-6 columns">
@@ -594,14 +584,14 @@
       </article>
     </a>
     
-    <!-- End Right Panel - Step 0 :  - Detailed Directions -->
+    <!-- End Right Panel - Step 05/C : Pre-heat 325F - Detailed Directions -->
 
-        <!-- Right Panel - Step 0 :  - Detailed Directions -->
+    <!-- Right Panel - Step 06/A : Bake - Detailed Directions -->
 
-    <a name="#">
-      <article class="article-background" id="-background">
+    <a name="#45m-bake">
+      <article class="article-background" class="45m-bake-background">
  
-      <h3><a name="#"></a></h3>
+      <h3><a name="#45m-bake">Bake!</a></h3>
       <hr />
         <div class="row">
           <div class="large-6 columns">
@@ -626,14 +616,14 @@
       </article>
     </a>
     
-    <!-- End Right Panel - Step 0 :  - Detailed Directions -->
+    <!-- End Right Panel - Step 06/A : Bake - Detailed Directions -->
 
-        <!-- Right Panel - Step 0 :  - Detailed Directions -->
+   <!-- Right Panel - Step 06/B : Cooling - Detailed Directions -->
 
-    <a name="#">
-      <article class="article-background" id="-background">
+    <a name="#baked-cooling">
+      <article class="article-background" class="baked-cooling-background">
  
-      <h3><a name="#"></a></h3>
+      <h3><a name="#baked-cooling">Cooling</a></h3>
       <hr />
         <div class="row">
           <div class="large-6 columns">
@@ -658,71 +648,9 @@
       </article>
     </a>
     
-    <!-- End Right Panel - Step 0 :  - Detailed Directions -->
+    <!-- End Right Panel - Step 06/B : Cooling - Detailed Directions -->
 
-        <!-- Right Panel - Step 0 :  - Detailed Directions -->
-
-    <a name="#">
-      <article class="article-background" id="-background">
  
-      <h3><a name="#"></a></h3>
-      <hr />
-        <div class="row">
-          <div class="large-6 columns">
-             <div class="knob-counter" >
-                <!-- See http://anthonyterrien.com/knob/ for more info -->
-                <!-- need help! knob counter not working -->
-                <!-- pre-start counter time: 0s, task duration: 15m -->
-                <input type="text" class="knob" data-width="500" data-displayInput=false value="35" data-thickness=".4" data-fgColor="chartreuse" data-readOnly=true >
-                <script>
-                  $(function() {
-                      $(".dial").knob();
-                  });
-                </script>
-                <!-- ding sound when time is up -->
-              </div>
-            </div>
-        </div>
- 
-        <div class="panel">
-          <a href="#top"><h5>Next Step</h5></a>
-        </div>
-      </article>
-    </a>
-    
-    <!-- End Right Panel - Step 0 :  - Detailed Directions -->
-
-        <!-- Right Panel - Step 0 :  - Detailed Directions -->
-
-    <a name="#">
-      <article class="article-background" id="-background">
- 
-      <h3><a name="#"></a></h3>
-      <hr />
-        <div class="row">
-          <div class="large-6 columns">
-             <div class="knob-counter" >
-                <!-- See http://anthonyterrien.com/knob/ for more info -->
-                <!-- need help! knob counter not working -->
-                <!-- pre-start counter time: 0s, task duration: 15m -->
-                <input type="text" class="knob" data-width="500" data-displayInput=false value="35" data-thickness=".4" data-fgColor="chartreuse" data-readOnly=true >
-                <script>
-                  $(function() {
-                      $(".dial").knob();
-                  });
-                </script>
-                <!-- ding sound when time is up -->
-              </div>
-            </div>
-        </div>
- 
-        <div class="panel">
-          <a href="#top"><h5>Next Step</h5></a>
-        </div>
-      </article>
-    </a>
-    
-    <!-- End Right Panel - Step 0 :  - Detailed Directions -->
 
 
     </div>
@@ -745,10 +673,9 @@
         </div>
         <div class="large-6 columns">
           <ul class="inline-list right">
-            <li><a href="#">Link 1</a></li>
-            <li><a href="#">Link 2</a></li>
-            <li><a href="#">Link 3</a></li>
-            <li><a href="#">Link 4</a></li>
+         <li><a href="#" class="button">Home</a></li>
+         <li><a href="#" class="button">Recipes</a></li>
+         <li><a href="#" class="button">Ingredients</a></li>
           </ul>
         </div>
       </div>
