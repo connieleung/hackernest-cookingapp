@@ -177,6 +177,19 @@ article {
 
 /*-- Cooking Tool List Items --*/
 
+.panel.cooking-tools-background {
+	height: 6em;
+	}
+
+.panel.cooking-tools-background li:first-child {
+	margin-left: -1em;
+}
+
+.panel.cooking-tools-background li {
+	float: left;
+	list-style: none;
+}
+
 #cbp-ntaccordion > div.cooking-tools li:first-child {
 	margin-left: 0em;
 }
