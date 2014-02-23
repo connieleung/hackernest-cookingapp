@@ -26,7 +26,7 @@ a.next {
 	letter-spacing: 0.1em;
 }
 
-#panel-ingredients div div div a.next {
+#panel-ingredients div div a.next {
 	/* Ingredients Sub-Menu, Start! */
 	margin-right: 15px;
 }
@@ -34,6 +34,7 @@ a.next {
 #panel-overnight div div div.panel a.next {
 	/* Overnight Sub-Menu */
 	margin-right: 15px;
+	margin-bottom: 20px;
 }
 
 #panel-sift a.next:hover {
@@ -53,23 +54,15 @@ a.next {
 }
 
 /* article texts */
-.side-nav-part-a {
+
+#panel-ingredients div div .large-6.columns {
 	list-style-type: none;
 	color: #333;
-	float: left;
 	text-align: left;
 	letter-spacing: 0.05em;
 	line-height: 1.5em;
 }
 
-/*.side-nav-part-b {
-	list-style-type: none;
-	color: #333;
-	float: right;
-	text-align: left;
-	margin-left: 5px;
-	letter-spacing: 0.05em;
-}*/
 
 /* article panel background height */
 /*.panel {
