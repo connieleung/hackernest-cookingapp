@@ -58,19 +58,17 @@ a.next {
 	line-height: 1.5em;
 }
 
-/* article panel background height */
-/*.panel {
-	height: 405px;
+/* Other */
+div.knob-counter canvas {
+	margin-top: 3em;
 }
 
-#panel-ingredients {
-	height: 450px;
-	margin-bottom: 0;
+#panel-overnight div div div ul p {
+	border-top: 1px solid #3f3f3f;
+	margin-top: 20px;
+	padding: 5px 5px 5px 0;
 }
 
-#panel-sift {
-	height: 450px;
-	margin-bottom: 0;
-}*/
-
-
+#panel-overnight div div div ul li {
+	color: #222;
+}
