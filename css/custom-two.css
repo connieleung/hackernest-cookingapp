@@ -43,9 +43,14 @@ a.next {
 	margin: 0 auto;
 	display: block;
 	margin-top: 40px;
-	margin-bottom: 20px;
+	margin-bottom: 10px;
 	width: 350px;
 	text-transform: uppercase;
+	color: #fff;
+	padding-top: 10px;
+	height: 38px;
+	border: 1px solid rgba(0,0,0,0.25);
+	text-shadow: 1px 1px 2px rgba(0,0,0,0.25);
 }
 
 /* article texts */
@@ -58,19 +63,17 @@ a.next {
 	line-height: 1.5em;
 }
 
-/* article panel background height */
-/*.panel {
-	height: 405px;
+/* Other */
+div.knob-counter canvas {
+	margin-top: 3em;
 }
 
-#panel-ingredients {
-	height: 450px;
-	margin-bottom: 0;
+#panel-overnight div div div ul p {
+	border-top: 1px solid #3f3f3f;
+	margin-top: 20px;
+	padding: 5px 5px 5px 0;
 }
 
-#panel-sift {
-	height: 450px;
-	margin-bottom: 0;
-}*/
-
-
+#panel-overnight div div div ul li {
+	color: #222;
+}

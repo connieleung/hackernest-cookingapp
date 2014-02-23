@@ -370,3 +370,17 @@ border: 1px solid rgba(0,0,0,0.25);
 	float: left;
 	margin-right: 10px;
 }
+.api-result {
+    width: 400px;
+    float: left;
+    margin-left: 20px;
+}
+
+#yellowpages-modal h3 {
+    font-size: 28px;
+    text-align: center;
+}
+
+.api-result a {
+    color: #47a3da !important;
+}

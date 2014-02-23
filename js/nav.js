@@ -4,6 +4,7 @@ isis.activePanel = 'ingredients';
 isis.donePanel = true;
 isis.stoppedAt = 0;
 isis.stoppedAtShowErrorDelay = 1300;
+isis.nextMotion = 'shake';
 
 $( document ).ready( function( $ ) {
     $('article.panel').hide();
@@ -12,7 +13,7 @@ $( document ).ready( function( $ ) {
         event.preventDefault();
         var panelId = $(this).parent('li').attr('id').split('-')[0];
 
-        if (panelId != 'ingredients')
+        if (panelId != 'ingredients' && panelId != 'overnight')
             isis.donePanel = false;
         else {
             if ($('article.panel-' + panelId + ' input.knob').length == 0)
