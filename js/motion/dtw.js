@@ -82,7 +82,8 @@
                 total += ret[ option ];
             }
         } );
-
+//        console.log(motion.name);
+//console.log(total);
         ret.total = total;
         //counting total predictions below threshold
 		return ret;
