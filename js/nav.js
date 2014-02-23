@@ -13,10 +13,11 @@ $( document ).ready( function( $ ) {
         event.preventDefault();
         var panelId = $(this).parent('li').attr('id').split('-')[0];
 
-        if (panelId != 'ingredients' && panelId != 'overnight')
+        console.log("panel: " + panelId);
+        if (panelId != 'ingredients' && panelId != 'overnight') {
             isis.donePanel = false;
-        else {
-            if ($('article.panel-' + panelId + ' input.knob').length == 0)
+        } else {
+            if ($('article.panel-' + panelId + ' input.knob').length > 0)
                 isis.donePanel = false;
             else
                 isis.donePanel = true;
