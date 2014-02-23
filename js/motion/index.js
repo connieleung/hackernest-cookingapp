@@ -11,10 +11,14 @@ $( document ).ready( function( $ ) {
 
 		if ( motion.detectArrayCounter >= motion.bufferSize ) {
 			console.log( motion.name );
-			motion.domCount.val(parseInt( motion.domCount.val() ) + 1).trigger('change');
+			motion.domCount.val(parseInt( motion.domCount.val() ) + 1);
 
-            if (motion.domCount.attr('data-max') && parseInt(motion.domCount.val()) >= parseInt(motion.domCount.attr('data-max')))
+            if (motion.domCount.attr('data-max') && parseInt(motion.domCount.val()) > parseInt(motion.domCount.attr('data-max'))) {
                 isis.donePanel = true;
+                motion.domCount.trigger('configure', {'bgColor': '#95b13c'}).trigger('configure', {'fgColor': '#95b13c'});
+            }
+
+            motion.domCount.trigger('change');
 
 			checkMotion = false;
 
