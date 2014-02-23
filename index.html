@@ -56,22 +56,22 @@
         </div>
 
         <ul class="">
-            <li class="ingredients" data-panel="ingredients">
+            <li id="ingredients-nav">
                 <h4 class="nav selected">Ingredients</h4>
             </li>
-            <li data-panel="sift">
+            <li id="sift-nav">
                 <h4 class="nav">Sift</h4>
             </li>
-            <li data-panel="whisk">
+            <li id="whisk-nav">
                 <h4 class="nav">Whisk</h4>
             </li>
-            <li data-panel="knead">
+            <li id="knead-nav">
                 <h4 class="nav">Mix &amp; Knead</h4>
             </li>
-            <li data-panel="overnight">
+            <li id="overnight-nav">
                 <h4 class="nav">Overnight</h4>
             </li>
-            <li data-panel="chop">
+            <li id="chop-nav">
                 <h4 class="nav">Shape &amp; Cut</h4>
             </li>
         </ul>
@@ -80,7 +80,7 @@
 
 <div class="large-8 small-7 columns" role="content">
 
-    <article class="article-background panel recipe-article-header-background panel-ingredients">
+    <article id="panel-ingredients" class="article-background panel recipe-article-header-background panel-ingredients">
         <div class="row">
             <div class="large-12 columns">
                 <div class="panel" class="recipe-feature-text">
@@ -105,13 +105,14 @@
                             <a class="button" href="#" id="missing-ingredients-button" data-reveal-id="yellowpages-modal">Missing ingredients? Click Here</a>
                         </div>
                     </div>
+                    <a class="next" href="#">Start!</a>
                 </div>
             </div>
         </div>
     </article>
 
 
-    <article class="article-background panel recipe-article-header-background panel-sift">
+    <article id="panel-sift" class="article-background panel recipe-article-header-background panel-sift">
         <div class="row">
             <div class="large-12 columns">
                 <div class="panel" class="recipe-feature-text">
@@ -133,7 +134,7 @@
                                    class="knob"
                                    data-width="200"
                                    data-height="200"
-                                   data-displayInput=false
+                                   data-displayInput=true
                                    data-displayPrevious=true
                                    value="0"
                                    data-min="0"
@@ -149,7 +150,7 @@
                             <!-- ding sound when time is up -->
                         </div>
                     </div>
-                    <a class="next" href="#top">Next Step</a>
+                    <a class="next" href="#">Next Step</a>
                 </div>
             </div>
         </div>
@@ -157,7 +158,7 @@
 
 
 
-    <article class="article-background panel recipe-article-header-background panel-whisk">
+    <article id="panel-whisk" class="article-background panel recipe-article-header-background panel-whisk">
         <div class="row">
             <div class="large-12 columns">
                 <div class="panel" class="recipe-feature-text">
@@ -197,14 +198,14 @@
                             <!-- ding sound when time is up -->
                         </div>
                     </div>
-                    <a class="next" href="#top">Next Step</a>
+                    <a class="next" href="#">Next Step</a>
                 </div>
             </div>
         </div>
     </article>
 
 
-    <article class="article-background panel recipe-article-header-background panel-knead">
+    <article id="panel-knead" class="article-background panel recipe-article-header-background panel-knead">
         <div class="row">
             <div class="large-12 columns">
                 <div class="panel" class="recipe-feature-text">
@@ -246,13 +247,13 @@
                             <!-- ding sound when time is up -->
                         </div>
                     </div>
-                    <a class="next" href="#top">Next Step</a>
+                    <a class="next" href="#">Next Step</a>
                 </div>
             </div>
         </div>
     </article>
 
-    <article class="article-background panel recipe-article-header-background panel-overnight">
+    <article id="panel-overnight" class="article-background panel recipe-article-header-background panel-overnight">
         <div class="row">
             <div class="large-12 columns">
                 <div class="panel" class="recipe-feature-text">
@@ -266,7 +267,7 @@
                             <li>This dough is very firm – don’t worry if it’s cracked and hard to knead, it’ll work out</li>
                         </ul>
                     </div>
-                    <a class="next" href="#top">Next Step</a>
+                    <a class="next" href="#">Next Step</a>
                 </div>
             </div>
         </div>
@@ -274,7 +275,7 @@
 
 
 
-    <article class="article-background panel recipe-article-header-background panel-chop">
+    <article id="panel-chop" class="article-background panel recipe-article-header-background panel-chop">
         <div class="row">
             <div class="large-12 columns">
                 <div class="panel" class="recipe-feature-text">
@@ -314,7 +315,7 @@
                             <!-- ding sound when time is up -->
                         </div>
                     </div>
-                    <a class="next" href="#top">Next Step</a>
+                    <a class="next" href="#">Next Step</a>
                 </div>
             </div>
         </div>

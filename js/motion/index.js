@@ -52,9 +52,15 @@ $( document ).ready( function( $ ) {
         thisMotion = false;
 
         $.each(motionData, function(index, motion) {
-            if (motion.name == isis.activePanel) {
-                thisMotion = motion;
-                return;
+            if (isis.donePanel) {
+                if (motion.name == 'tap') {
+                    thisMotion = motion;
+                }
+            } else {
+                if (motion.name == isis.activePanel) {
+                    thisMotion = motion;
+                    return;
+                }
             }
         });
 		//for ( var i = 0; i < motionData.length; i++ ) {
