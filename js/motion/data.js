@@ -93,7 +93,7 @@ var motionData = [
 		threshold: 30,
 		bufferSize: 10,
 		greaterThan: true,
-		timeBetweenMotions: 500,
+		timeBetweenMotions: 50,
 		detectArrayCounter: 0,
         axes: ['y'],
         inputs: {
