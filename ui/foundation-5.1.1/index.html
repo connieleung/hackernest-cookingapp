@@ -8,9 +8,12 @@
     <link rel="stylesheet" href="css/foundation.css" />
     <link rel="stylesheet" href="css/foundation.min.css" />
     <link rel="stylesheet" href="css/normalize.css" />
-    <link rel="stylesheet" type="text/css" href="css/default.css" />
-    <link rel="stylesheet" type="text/css" href="css/component.css" />
+    <link rel="stylesheet" type="text/css" href="css/nest/default.css" />
+    <link rel="stylesheet" type="text/css" href="css/nest/component.css" />
+    <link rel="stylesheet" href="css/custom.css" />
+
     <script src="js/vendor/modernizr.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
   </head>
   <body>
 
@@ -39,8 +42,10 @@
 
     <!-- Sidebar -->
  
-    <aside class="large-3 columns">
+    <aside class="large-4 columns">
 
+      <!-- NestedAccordion -->
+      <!-- http://tympanus.net/Blueprints/NestedAccordion/ -->
       <ul id="cbp-ntaccordion" class="cbp-ntaccordion" style="border: 1px solid purple;">
 
           <!-- Recipe Header -->
@@ -57,6 +62,7 @@
           <div class="ingredients-panel">
             <a href="#ingredients-panel">
               <h5>Ingredients</h5>
+            </a>
 
               <ul class="side-nav" style="border: 1px solid purple; ">
                 
@@ -77,18 +83,20 @@
                 </section>
 
               </ul>
-            </a>
+            
           </div>
      
           <!-- End Ingredients Panel -->
 
           <!-- Cooking Tools Used -->
 
-          <ul>
-            <li><img src="http://placehold.it/30x30" /></li>
-            <li><img src="http://placehold.it/30x30" /></li>
-            <li><img src="http://placehold.it/30x30" /></li>
-          </ul>      
+          <div class="cooking-tools">
+              <ul>
+                <li><a href="#cooking-tools"><img src="http://placehold.it/30x30" /></a></li>
+                <li><a href="#cooking-tools"><img src="http://placehold.it/30x30" /></a></li>
+                <li><a href="#cooking-tools"><img src="http://placehold.it/30x30" /></a></li>
+              </ul>      
+          </div>
 
           <!-- End Cooking Tools Used -->
 
@@ -206,12 +214,13 @@
       <!-- End Recipe Directions / Instructions -->
 
     </aside>
- 
+
+    <!-- End NestedAccordion -->
     <!-- End Sidebar -->
 
     <!-- Main Page Content -->
 
-    <div class="large-9 columns" role="content">
+    <div class="large-8 columns" role="content">
  
      <!-- Recipe Header -->
 
@@ -242,24 +251,10 @@
 
     <!-- End Recipe Header -->
 
-    <!--Ingredients Panel -->
+    <!-- Ingredients Panel -->
 
       <a name="#ingredients-panel">
-        <article class="#ingredients-panel-background" style="background: url('http://placehold.it/400x240');">
-   
-          <h3><a href="#">Blog Post Title</a></h3>
-          <h6>Written by <a href="#">John Smith</a> on August 12, 2012.</h6>
-   
-          <div class="row">
-            <div class="large-6 columns">
-              <p>Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong. Eiusmod swine spare ribs reprehenderit culpa.</p>
-            </div>
-            <!-- <div class="large-6 columns">
-              <img src="http://placehold.it/400x240&text=[img]" />
-            </div> -->
-          </div>
-   
-          <p><!-- --></p>
+        <article class="#ingredients-panel-background" style="background: url('http://placehold.it/400x240&text=[Ingredients]');">
    
           <div class="panel">
             <h5>Ingredients Icons?</h5>
@@ -269,10 +264,72 @@
               <li><img src="http://placehold.it/30x30" /></li>
             </ul>   
           </div>
+
         </article>
       </a>
       
-     <!-- End Recipe Header -->
+     <!-- End Ingredients Panel -->
+
+    <!-- Cooking Tools -->
+
+      <a name="#cooking-tools">
+        <article class="#ingredients-panel-background" style="background: url('http://placehold.it/400x240&text=[Cooking Tools]');">
+   
+          <div class="panel">
+            <h5>Cooking Icons?</h5>
+            <ul>
+              <li><img src="http://placehold.it/30x30" /></li>
+              <li><img src="http://placehold.it/30x30" /></li>
+              <li><img src="http://placehold.it/30x30" /></li>
+            </ul>   
+          </div>
+
+        </article>
+      </a>
+      
+     <!-- End Ingredients Panel -->
+
+    <!-- Right Panel - Step 01 : Detailed Directions -->
+
+      <a name="#cooking-tools">
+        <article class="#ingredients-panel-background" style="background: url('http://placehold.it/400x240&text=[Make]');">
+   
+        <h3><a name="#start-whisking">Start Whisking</a></h3>
+        <h6 class="uppercase">Tools Used</h6>
+        <hr />
+          <div class="row">
+            <div class="large-6 columns">
+              <ul>
+              <li>
+                <span class="isis-foods-nocircle-bowls-nocircle:before"></span>
+                <span class="isis-foods-nocircle-bowls-nocircle:after"></span>
+              </li>
+              <li>
+                <span class="isis-foods-whisk:before"></span>
+                <span class="isis-foods-whisk:after"></span>
+              </li>
+              <li><img src="http://placehold.it/30x30" /></li>
+            </ul>  
+               <div class="knob-counter" >
+                  <!-- See http://anthonyterrien.com/knob/ for more info -->
+                  <!-- need help! knob counter not working -->
+                  <input type="text" class="knob" data-width="500" data-displayInput=false value="35" data-thickness=".4" data-fgColor="chartreuse" data-readOnly=true >
+                  <script>
+                    $(function() {
+                        $(".dial").knob();
+                    });
+                  </script>
+                </div>
+              </div>
+          </div>
+   
+          <div class="panel">
+            <a href="#"><h5>Next Step</h5></a>
+          </div>
+        </article>
+      </a>
+      
+     <!-- End Ingredients Panel -->
  
     </div>
  

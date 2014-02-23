@@ -1,0 +1,16 @@
+<img src="http://placehold.it/350x150" />
+ style="border: 1px solid purple; 
+
+
+ .uppercase {
+ 	text-transform: uppercase;
+}
+
+
+
+.knob-counter {
+	background: url('img/knob.png');
+	background-size: 300%;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
