@@ -1,1 +1,89 @@
-sdfsdfsdfs
+/* Button Links : start, next steps, missing ingredients */
+
+#panel-sift a.next {
+	background-color: #B5B5B5;
+	float: right;
+	padding: 10px 15px;
+	margin-right: 100px;
+	margin-top: 15px;
+	display: inline-block;
+	/*text-transform: uppercase;*/
+	font-weight: bold;
+	color: #797979;
+	letter-spacing: 0.1em;
+}
+
+a.next {
+	background-color: #B5B5B5;
+	float: right;
+	padding: 10px 15px;
+	margin-right: 100px;
+	margin-top: 15px;
+	display: inline-block;
+	/*text-transform: uppercase;*/
+	font-weight: bold;
+	color: #797979;
+	letter-spacing: 0.1em;
+}
+
+#panel-ingredients div div div a.next {
+	/* Ingredients Sub-Menu, Start! */
+	margin-right: 15px;
+}
+
+#panel-overnight div div div.panel a.next {
+	/* Overnight Sub-Menu */
+	margin-right: 15px;
+}
+
+#panel-sift a.next:hover {
+	background-color: #797979;
+	color: #B5B5B5;
+	-webkit-transition: background-color 300ms ease-out;
+	-moz-transition: background-color 300ms ease-out;
+	transition: background-color 300ms ease-out;
+}
+
+#missing-ingredients-button {
+	margin: 0 auto;
+	display: block;
+	margin-top: 40px;
+	margin-bottom: 20px;
+	width: 300px;
+}
+
+/* article texts */
+.side-nav-part-a {
+	list-style-type: none;
+	color: #333;
+	float: left;
+	text-align: left;
+	letter-spacing: 0.05em;
+	line-height: 1.5em;
+}
+
+/*.side-nav-part-b {
+	list-style-type: none;
+	color: #333;
+	float: right;
+	text-align: left;
+	margin-left: 5px;
+	letter-spacing: 0.05em;
+}*/
+
+/* article panel background height */
+/*.panel {
+	height: 405px;
+}
+
+#panel-ingredients {
+	height: 450px;
+	margin-bottom: 0;
+}
+
+#panel-sift {
+	height: 450px;
+	margin-bottom: 0;
+}*/
+
+
