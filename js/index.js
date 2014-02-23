@@ -2,7 +2,7 @@
 $( document ).ready( function( $ ) {
 	var socket = io.connect( 'http://build.kiwiwearables.com:8080' );
 
-    var thingToCheck = 'sift';
+    var thingToCheck = 'whisk';
 	var checkMotion = true;
     var thisMotion;
 
@@ -52,7 +52,7 @@ $( document ).ready( function( $ ) {
         });
 		//for ( var i = 0; i < motionData.length; i++ ) {
 
-			//thisMotion = motionData[i];
+		//	thisMotion = motionData[i];
 
 			dtw = DTW( kiwi_data, thisMotion );
 			total = dtw.total;
