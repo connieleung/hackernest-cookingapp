@@ -1,7 +1,6 @@
 /* Button Links : start, next steps, missing ingredients */
 
 #panel-sift a.next {
-	background-color: #B5B5B5;
 	float: right;
 	padding: 10px 15px;
 	margin-right: 100px;
@@ -9,12 +8,10 @@
 	display: inline-block;
 	/*text-transform: uppercase;*/
 	font-weight: bold;
-	color: #797979;
 	letter-spacing: 0.1em;
 }
 
 a.next {
-	background-color: #B5B5B5;
 	float: right;
 	padding: 10px 15px;
 	margin-right: 100px;
@@ -22,7 +19,6 @@ a.next {
 	display: inline-block;
 	/*text-transform: uppercase;*/
 	font-weight: bold;
-	color: #797979;
 	letter-spacing: 0.1em;
 }
 
@@ -38,8 +34,6 @@ a.next {
 }
 
 #panel-sift a.next:hover {
-	background-color: #797979;
-	color: #B5B5B5;
 	-webkit-transition: background-color 300ms ease-out;
 	-moz-transition: background-color 300ms ease-out;
 	transition: background-color 300ms ease-out;
@@ -50,7 +44,8 @@ a.next {
 	display: block;
 	margin-top: 40px;
 	margin-bottom: 20px;
-	width: 300px;
+	width: 350px;
+	text-transform: uppercase;
 }
 
 /* article texts */
@@ -62,7 +57,6 @@ a.next {
 	letter-spacing: 0.05em;
 	line-height: 1.5em;
 }
-
 
 /* article panel background height */
 /*.panel {
