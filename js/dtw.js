@@ -36,39 +36,37 @@
     };
 
     // add new timepoint - expecting JSON data containing ax, ay, az, gx, gy, gz
-    var addInput = function( data, sumA, sumG ) {
+    var addInput = function( data, motion ) {
 
-	    if ( sumA.length > 0 ) {
+        training = {};
+
+	    if ( typeof motion.inputs.sumA != 'undefined' ) {
 		    data.sumA = data.ax + data.ay + data.az;
-		    inputs.sumA = [];
-		    training.sumA = sumA;
 	    }
 
-	    if ( sumG.length > 0 ) {
+	    if ( typeof motion.inputs.sumG != 'undefined' ) {
 		    data.sumG = data.gx + data.gy + data.gz;
-		    inputs.sumG = [];
-		    training.sumG = sumG;
 	    }
 
-        Object.keys( inputs ).forEach( function( option ) {
-	        inputs[ option ].push( data[ option ] );
-            if ( inputs[ option ].length > 100 ) { // save the last 100 time points for each input array
-                inputs[ option ].shift();
+        Object.keys( motion.inputs ).forEach( function( option ) {
+	        motion.inputs[ option ].push( data[ option ] );
+            if ( motion.inputs[ option ].length > 100 ) { // save the last 100 time points for each input array
+                motion.inputs[ option ].shift();
             }
         } );
 
-	    var score = getScore();
+	    var score = getScore(motion);
 
         return score;
     };
 
     // returns the DTW score of all 6 arrays added    
-    var getScore = function(){
+    var getScore = function(motion){
         var total = 0,
             ret = {};
 
-        Object.keys( inputs ).forEach( function( option ) {
-            ret[ option ] = DTWDistance( inputs[ option ], training[ option ], option.match( /g/i ) ? 360 * 3 : 16 * 3 );
+        Object.keys( motion.inputs ).forEach( function( option ) {
+            ret[ option ] = DTWDistance( motion.inputs[ option ], motion[ option ], option.match( /g/i ) ? 360 * 3 : 16 * 3 );
             total += ret[ option ];
         });
 

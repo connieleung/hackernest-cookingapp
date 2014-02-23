@@ -27,21 +27,23 @@ $( document ).ready( function( $ ) {
 		socket.emit( 'listen', { device_id: '44', password: '123' } );
 	} );
 
+    console.log('starting socket');
 	socket.on( 'listen_response', function( data ) {
 
 		var kiwi_data = JSON.parse( data.message );
 		var dtw, total, thisMotion;
-//		console.log( kiwi_data );
+		//console.log( kiwi_data );
 
 		for ( var i = 0; i < motionData.length; i++ ) {
 
 			thisMotion = motionData[i];
 
-			dtw = DTW( kiwi_data, thisMotion.sumA, thisMotion.sumG );
+			dtw = DTW( kiwi_data, thisMotion );
 			total = dtw.total;
 
-			$( '#' + motionData.name + ' .threshold' ).text( motionData.threshold );
-			$( '#' + motionData.name + ' .score' ).text( total );
+            if ($( '#' + thisMotion.name + ' .threshold').text().length == 0)
+			    $( '#' + thisMotion.name + ' .threshold' ).text( thisMotion.threshold );
+			//$( '#' + thisMotion.name + ' .score' ).text( total );
 
 			if ( thisMotion.greaterThan ) {
 				if ( total >= thisMotion.threshold && checkMotion ) {
