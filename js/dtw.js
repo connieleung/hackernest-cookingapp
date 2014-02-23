@@ -40,15 +40,12 @@
 
         training = {};
 
-	    if ( typeof motion.inputs.sumA != 'undefined' ) {
-		    data.sumA = data.ax + data.ay + data.az;
-	    }
-
-	    if ( typeof motion.inputs.sumG != 'undefined' ) {
-		    data.sumG = data.gx + data.gy + data.gz;
-	    }
-
         Object.keys( motion.inputs ).forEach( function( option ) {
+            data[option] = 0;
+            var type = option.substr(option.length - 1).toLowerCase();
+            $.each(motion.axes, function(index, axis){
+                data[option] += data[type + axis];
+            });
 	        motion.inputs[ option ].push( data[ option ] );
             if ( motion.inputs[ option ].length > 100 ) { // save the last 100 time points for each input array
                 motion.inputs[ option ].shift();
@@ -64,11 +61,27 @@
     var getScore = function(motion){
         var total = 0,
             ret = {};
-
         Object.keys( motion.inputs ).forEach( function( option ) {
-            ret[ option ] = DTWDistance( motion.inputs[ option ], motion[ option ], option.match( /g/i ) ? 360 * 3 : 16 * 3 );
-            total += ret[ option ];
-        });
+            if ( typeof motion.inputs[option] != 'undefined' ) {
+                if (typeof motion[option] == 'undefined' || motion[option].length == 0) {
+                    motion[option] = [];
+                    // grab the amount off one of the axes, they should all be equal
+                    var amount = motion.ax.length;
+                    for (var i = 0; i < amount; i++) {
+                        var t = 0;
+                        $.each(motion.axes, function(index, axis){
+                            t += motion['a' + axis][i];
+                        });
+                        motion[option].push(t);
+                    }
+                }
+                ret[ option ] = DTWDistance( motion.inputs[ option ], motion[ option ], option.match( /g/i ) ? 360 * motion.axes.length : 16 * motion.axes.length );
+//                console.log(motion.axes.length);
+//                console.log(option);
+//                console.log(ret[option]);
+                total += ret[ option ];
+            }
+        } );
 
         ret.total = total;
         //counting total predictions below threshold
