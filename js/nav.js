@@ -22,6 +22,7 @@ $( document ).ready( function( $ ) {
         }
 
         isis.activePanel = panelId;
+        isis.stoppedAt = 0;
         $('h4.nav').removeClass('selected');
         $(this).addClass('selected');
         $('article.panel').hide();
