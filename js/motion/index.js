@@ -2,16 +2,16 @@
 var isis = isis || {};
 $( document ).ready( function( $ ) {
 	var socket = io.connect( 'http://build.kiwiwearables.com:8080' );
-
-    var thingToCheck = 'whisk';
 	var checkMotion = true;
     var thisMotion;
 
 	var motionDetected = function( motion ) {
-
 		if ( motion.detectArrayCounter >= motion.bufferSize ) {
 			console.log( motion.name );
 			motion.domCount.val(parseInt( motion.domCount.val() ) + 1);
+            motion.domCount.parents('article.panel').find('.start').hide();
+            motion.domCount.parents('article.panel').find('.error').hide();
+            isis.stoppedAt = 0;
 
             if (motion.domCount.attr('data-max') && parseInt(motion.domCount.val()) > parseInt(motion.domCount.attr('data-max'))) {
                 isis.donePanel = true;
@@ -27,7 +27,6 @@ $( document ).ready( function( $ ) {
 				checkMotion = true;
 			}, motion.timeBetweenMotions );
 		}
-
 	};
 
     $.each(motionData, function(index, motion) {
@@ -47,10 +46,8 @@ $( document ).ready( function( $ ) {
 	socket.on( 'listen_response', function( data ) {
 		var kiwi_data = JSON.parse( data.message );
 		var dtw, total, thisMotion;
-		//console.log( kiwi_data );
 
         thisMotion = false;
-
         $.each(motionData, function(index, motion) {
             if (isis.donePanel) {
                 if (motion.name == 'tap') {
@@ -75,23 +72,18 @@ $( document ).ready( function( $ ) {
             if ( total >= thisMotion.threshold && checkMotion ) {
                 thisMotion.detectArrayCounter++;
                 motionDetected( thisMotion );
+            } else if ( isis.stoppedAt == 0 && total < thisMotion.threshold ) {
+                isis.stoppedAt = new Date().getTime();
             }
         }
         else {
             if ( total <= thisMotion.threshold && checkMotion ) {
                 thisMotion.detectArrayCounter++;
                 motionDetected( thisMotion );
+            } else if ( isis.stoppedAt == 0 && total > thisMotion.threshold ) {
+                isis.stoppedAt = new Date().getTime();
             }
         }
-
-//		console.log(kiwi_data); // Kiwi sensor data is a JSON object
-
-//		var packet_type = kiwi_data.packet_type;
-
-	// Capture accelerometer and gyroscope data, or tap motion events
-	// 00 = raw sensor data
-	// 03 = motion events
-
 	} );
 
 } );

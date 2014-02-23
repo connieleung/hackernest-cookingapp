@@ -2,7 +2,7 @@ var isis = isis || {};
 
 isis.activePanel = 'ingredients';
 isis.donePanel = true;
-isis.lastActionAt = 0;
+isis.stoppedAt = 0;
 
 $( document ).ready( function( $ ) {
     $('article.panel').hide();
@@ -14,7 +14,7 @@ $( document ).ready( function( $ ) {
         if (panelId != 'ingredients')
             isis.donePanel = false;
         else {
-            if ($('article.panel-' + panelID + ' input.knob').length == 0)
+            if ($('article.panel-' + panelId + ' input.knob').length == 0)
                 isis.donePanel = false;
             else
                 isis.donePanel = true;
