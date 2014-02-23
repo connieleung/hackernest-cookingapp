@@ -2,23 +2,20 @@
 $( document ).ready( function( $ ) {
 	var socket = io.connect( 'http://build.kiwiwearables.com:8080' );
 
-	var detectArrayCounter = 0;
-//	var dontCheck = 0;
 	var checkMotion = true;
 
 	var motionDetected = function( motion ) {
 
-		if ( detectArrayCounter >= motion.bufferSize ) {
+		if ( motion.detectArrayCounter >= motion.bufferSize ) {
 
 			// Tell the user what they did, track it, etc.
 			console.log( motion.name );
-			$('#detect').text( motion.name );
+			$( '#' + motion.name + ' .count' ).text( parseInt( $( '#' + motion.name + ' .count' ).text() ) + 1 );
 
-//			dontCheck = 1;
 			checkMotion = false;
+
 			setTimeout( function() {
-				detectArrayCounter = 0;
-//				dontCheck = 0;
+				motion.detectArrayCounter = 0;
 				checkMotion = true;
 //					$('#detect').toggleClass("detect-off");
 			}, motion.timeBetweenMotions );
@@ -43,15 +40,18 @@ $( document ).ready( function( $ ) {
 			dtw = DTW( kiwi_data, thisMotion.sumA, thisMotion.sumG );
 			total = dtw.total;
 
-			if ( thisMotion.greaterThan && dontCheck == 0 ) {
-				if ( total >= thisMotion.threshold ) {
-					detectArrayCounter++;
+			$( '#' + motionData.name + ' .threshold' ).text( motionData.threshold );
+			$( '#' + motionData.name + ' .score' ).text( total );
+
+			if ( thisMotion.greaterThan ) {
+				if ( total >= thisMotion.threshold && checkMotion ) {
+					thisMotion.detectArrayCounter++;
 					motionDetected( thisMotion );
 				}
 			}
 			else {
-				if ( total <= thisMotion.threshold ) {
-					detectArrayCounter++;
+				if ( total <= thisMotion.threshold && checkMotion ) {
+					thisMotion.detectArrayCounter++;
 					motionDetected( thisMotion );
 				}
 			}
