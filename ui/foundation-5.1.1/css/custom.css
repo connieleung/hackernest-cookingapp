@@ -1,5 +1,7 @@
-/* <img src="http://placehold.it/350x150" />
- style="border: 1px solid purple;  */
+html body {
+	
+}
+
 
 article {
 	height: 700px;
@@ -91,6 +93,12 @@ article {
 	border-color: #a65e00;
 }
 
+/*-- Info Window CSS --*/
+
+.article-background {
+	background-color: #e5e5e5;
+}
+
 /*-- Cooking Tool List Items --*/
 
 #cbp-ntaccordion > div.cooking-tools li:first-child {
@@ -102,4 +110,33 @@ article {
 	margin-right: 0.5em;
 	margin-bottom: 0.5em;
 	list-style: none;
+	background: url('http://placehold.it/300&text=[Knead into a Ball]');
+}
+
+#dryout-overnight-background {
+	background: url('http://placehold.it/300&text=[Overnight & Rise]');
+}
+
+#two-inch-divide-by-three {
+	background: url('http://placehold.it/300&text=[Divide by Three]');	
+}
+
+#cover-loaf-background {
+	background: url();
+}
+
+.cover-loaf-egg-salt-background {
+
+}
+
+.325F-preheat-background {
+
+}
+
+.45m-bake {
+
+}
+
+.baked-cooling-background {
+
 }
