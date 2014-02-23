@@ -84,19 +84,56 @@ article {
 }
 
 .cbp-ntaccordion h3 {
+	color: white;
 	padding: 0.25em 0;
 	font-weight: 600;
-	border-bottom: 1px solid #a65e00;
+	border-bottom: 1px solid white;
+	text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
 }
 
 #cbp-ntaccordion > hr {
-	border-color: #a65e00;
+	border-color: white;
+}
+
+/*-- Header CSS --*/
+
+#isis-header-div {
+	background-color: #ffac40;
+}
+
+#isis-header-div hr {
+	border-color: #a62d00;
+}
+
+#isis-header-div .isis-foods-nocircle-whisk-nocircle {
+	color: white;
+	text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+#isis-header-div h1 {
+	font-weight: 600;
+	color: white;
+	text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+#isis-header-div h1 small {
+	color: #a62d00;
+	text-shadow: none;
 }
 
 /*-- Info Window CSS --*/
 
 .article-background {
-	background-color: #e5e5e5;
+	background-color: #ffefda;
+}
+
+#isis-head-side {
+	background-color: #ffc273;
+}
+
+.article-background a {
+	color: black;
+	font-weight: 600;
 }
 
 /*-- Cooking Tool List Items --*/
