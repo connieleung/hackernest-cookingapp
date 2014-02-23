@@ -1,4 +1,5 @@
 /*global $:false, jQuery:false, console:false */
+var isis = isis || {};
 $( document ).ready( function( $ ) {
 	var socket = io.connect( 'http://build.kiwiwearables.com:8080' );
 
