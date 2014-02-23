@@ -2,7 +2,7 @@
 $( document ).ready( function( $ ) {
 	var socket = io.connect( 'http://build.kiwiwearables.com:8080' );
 
-    var thingToCheck = 'roll';
+    var thingToCheck = 'sift';
 	var checkMotion = true;
     var thisMotion;
 
@@ -40,8 +40,6 @@ $( document ).ready( function( $ ) {
 	} );
 
 	socket.on( 'listen_response', function( data ) {
-//        updateCount++;
-
 		var kiwi_data = JSON.parse( data.message );
 		var dtw, total, thisMotion;
 		//console.log( kiwi_data );

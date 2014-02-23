@@ -1,28 +1,44 @@
 html body {
-	
+	font-family: "Avant Garde", "Futura", sans-serif;
+	margin: 0;
 }
 
+a {
+	color: #2E2E2E;
+}
 
 article {
 	height: 700px;
 	padding: 10px;
 }
 
- .uppercase {
- 	text-transform: uppercase;
+.nav-bar {
+	text-transform: uppercase;
+	font-size: 5px;
 }
 
-
-
+.button {
+	text-decoration: none;
+	font-weight: normal;
+	background-color: #ffa127;
+	-webkit-transition: background-color 300ms ease-out;
+	-moz-transition: background-color 300ms ease-out;
+	transition: background-color 300ms ease-out;
+	margin-top: 35px;
+	font-size: 11px;
+	letter-spacing: 0.2em;
+	padding-bottom: 5px;
+	padding-top: 5px;
+	}
 
 /* NestedAccordion Side Menu*/
 
 .cbp-ntaccordion {
-	color: gray;
+	color: #151515;
 }
 
 #cbp-ntaccordion {
-	color: gray;
+	color: #151515;
 }
 
 .knob-counter {
