@@ -42,7 +42,7 @@ article {
 }
 
 .knob-counter {
-	background-image: url('img/knob.png');
+	/*background-image: url('img/knob.png');*/
 	background-size: 100%;
 	background-position: center center;
 	background-repeat: no-repeat;
