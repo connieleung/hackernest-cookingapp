@@ -12,6 +12,9 @@ $( document ).ready( function( $ ) {
 		if ( motion.detectArrayCounter >= motion.bufferSize ) {
 
 			// Tell the user what they did, track it, etc.
+
+//			$( '.knob' ).val( 10 ).trigger( 'change' );
+
 			console.log( motion.name );
 			motion.domCount.text( parseInt( motion.domCount.text() ) + 1 );
 
