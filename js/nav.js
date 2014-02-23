@@ -5,6 +5,7 @@ isis.donePanel = true;
 isis.stoppedAt = 0;
 isis.stoppedAtShowErrorDelay = 1300;
 isis.nextMotion = 'shake';
+isis.errorMotion = false;
 
 $( document ).ready( function( $ ) {
     $('article.panel').hide();
@@ -23,6 +24,7 @@ $( document ).ready( function( $ ) {
                 isis.donePanel = true;
         }
 
+        isis.errorMotion = false;
         isis.activePanel = panelId;
         isis.stoppedAt = 0;
         $('h4.nav').removeClass('selected');

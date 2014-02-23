@@ -109,6 +109,7 @@ var motionData = [
 	{
 		name: 'sift',
 		threshold: 30,
+        errorAction: 'chop',
 		bufferSize: 10,
 		greaterThan: true,
 		timeBetweenMotions: 50,
