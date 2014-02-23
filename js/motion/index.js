@@ -72,16 +72,20 @@ $( document ).ready( function( $ ) {
             if ( total >= thisMotion.threshold && checkMotion ) {
                 thisMotion.detectArrayCounter++;
                 motionDetected( thisMotion );
-            } else if ( isis.stoppedAt == 0 && total < thisMotion.threshold ) {
+            } else if ( isis.stoppedAt == 0 && thisMotion.domCount.parents('article.panel').find('.start').css('display') == 'none' && total < thisMotion.threshold ) {
                 isis.stoppedAt = new Date().getTime();
+            } else if ( isis.stoppedAt > 0 && ( isis.stoppedAt + isis.stoppedAtShowErrorDelay ) < new Date().getTime() ) {
+                thisMotion.domCount.parents('article.panel').find('.error').show();
             }
         }
         else {
             if ( total <= thisMotion.threshold && checkMotion ) {
                 thisMotion.detectArrayCounter++;
                 motionDetected( thisMotion );
-            } else if ( isis.stoppedAt == 0 && total > thisMotion.threshold ) {
+            } else if ( isis.stoppedAt == 0 && thisMotion.domCount.parents('article.panel').find('.start').css('display') == 'none' && total > thisMotion.threshold ) {
                 isis.stoppedAt = new Date().getTime();
+            } else if ( isis.stoppedAt > 0 && ( isis.stoppedAt + isis.stoppedAtShowErrorDelay ) < new Date().getTime() ) {
+                thisMotion.domCount.parents('article.panel').find('.error').show();
             }
         }
 	} );
