@@ -36,6 +36,25 @@ article {
 	background-position: top center;
 	background-repeat: repeat;
 	background-size: 500px 700px;
+
+}
+
+.article-title {
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 25px;
+	font-weight: bolder;
+	letter-spacing: 0.25em;
+	color: #151515;
+}
+
+/* feature text in articles */
+
+.recipe-feature-text {
+	float: right;
+	padding: 10px;
+	margin-right: 10px;
+	bottom: 0;
 }
 
 #recipe-article-header-background {
