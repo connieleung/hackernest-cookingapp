@@ -15,7 +15,7 @@ $( document ).ready( function( $ ) {
         var panelId = $(this).parent('li').attr('id').split('-')[0];
 
         console.log("panel: " + panelId);
-        if (panelId != 'ingredients' && panelId != 'overnight') {
+        if (panelId != 'ingredients' && panelId != 'overnight' && panelId != 'nextmorning') {
             isis.donePanel = false;
         } else {
             if ($('article.panel-' + panelId + ' input.knob').length > 0)
