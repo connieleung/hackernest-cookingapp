@@ -16,10 +16,12 @@ $( document ).ready( function() {
 					apikey: '7584x2qs9a8pk938sbayt3wa'
 				},
 				success: function( data ) {
-					var html = '';
+					var html = '<h3>Results courtesy of the amazing, incredible YellowAPI&trade;</h3>';
 					data.listings.forEach( function( listing ) {
-						html += '<h3>' + listing.name + '</h3>';
-						html += '<p>' + listing.address.street + '<br>' + listing.address.city + '</p>';
+                        html += '<div class="api-result">';
+						html += '<h5>' + listing.name + '</h5>';
+						html += '<p><a target="_blank" href="http://maps.google.ca/?saddr=' + position.coords.latitude + ',' + position.coords.longitude + '&daddr=' + encodeURIComponent(listing.address.street + ', ' + listing.address.city + ', ON') + '">' + listing.address.street + '<br>' + listing.address.city + '</a></p>';
+                        html += '</div>';
 					} );
 					$( '#yellowpages-modal h2' ).html( 'Grocery stores near you:' );
 					$( '#yellowpages-results' ).html( html );

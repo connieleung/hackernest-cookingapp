@@ -8,25 +8,25 @@ $( document ).ready( function( $ ) {
 	var motionDetected = function( motion ) {
 		if ( motion.detectArrayCounter >= motion.bufferSize ) {
 			console.log( motion.name );
-			motion.domCount.val(parseInt( motion.domCount.val() ) + 1);
-            motion.domCount.parents('article.panel').find('.start').hide();
-            motion.domCount.parents('article.panel').find('.error').hide();
-            isis.stoppedAt = 0;
-
-            if (motion.domCount.attr('data-max') && parseInt(motion.domCount.val()) > parseInt(motion.domCount.attr('data-max'))) {
-                isis.donePanel = true;
-                motion.domCount.trigger('configure', {'bgColor': '#95b13c'}).trigger('configure', {'fgColor': '#95b13c'});
+            if ( motion.name == isis.nextMotion ) {
+                $('#panel-' + isis.activePanel + ' .next').trigger('click');
+            } else {
+                motion.domCount.val(parseInt( motion.domCount.val() ) + 1);
+                motion.domCount.parents('article.panel').find('.start').hide();
+                motion.domCount.parents('article.panel').find('.error').hide();
+                if (motion.domCount.attr('data-max') && parseInt(motion.domCount.val()) > parseInt(motion.domCount.attr('data-max'))) {
+                    isis.donePanel = true;
+                    motion.domCount.trigger('configure', {'bgColor': '#95b13c'}).trigger('configure', {'fgColor': '#95b13c'});
+                }
+                motion.domCount.trigger('change');
             }
-
-            motion.domCount.trigger('change');
-
-			checkMotion = false;
-
-			setTimeout( function() {
-				motion.detectArrayCounter = 0;
-				checkMotion = true;
-			}, motion.timeBetweenMotions );
-		}
+            isis.stoppedAt = 0;
+            checkMotion = false;
+            setTimeout( function() {
+                motion.detectArrayCounter = 0;
+                checkMotion = true;
+            }, motion.timeBetweenMotions + (isis.donePanel ? 3000 : 0) );
+        }
 	};
 
     $.each(motionData, function(index, motion) {
@@ -50,7 +50,7 @@ $( document ).ready( function( $ ) {
         thisMotion = false;
         $.each(motionData, function(index, motion) {
             if (isis.donePanel) {
-                if (motion.name == 'tap') {
+                if (motion.name == isis.nextMotion) {
                     thisMotion = motion;
                 }
             } else {
