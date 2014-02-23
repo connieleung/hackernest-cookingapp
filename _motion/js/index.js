@@ -42,7 +42,7 @@ $( document ).ready( function( $ ) {
 	socket.on( 'listen_response', function( data ) {
 		var kiwi_data = JSON.parse( data.message );
 		var dtw, total, thisMotion;
-		//console.log( kiwi_data );
+//		console.log( kiwi_data );
 
         $.each(motionData, function(index, motion) {
             if (motion.name == thingToCheck) {
