@@ -3,7 +3,7 @@ var isis = isis || {};
 isis.activePanel = 'ingredients';
 isis.donePanel = true;
 isis.stoppedAt = 0;
-isis.stoppedAtShowErrorDelay = 1500;
+isis.stoppedAtShowErrorDelay = 1300;
 
 $( document ).ready( function( $ ) {
     $('article.panel').hide();
