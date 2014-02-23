@@ -1,4 +1,5 @@
 /*global $:false, jQuery:false, console:false */
+var isis = isis || {};
 $( document ).ready( function( $ ) {
 	var socket = io.connect( 'http://build.kiwiwearables.com:8080' );
 
@@ -11,8 +12,12 @@ $( document ).ready( function( $ ) {
 		if ( motion.detectArrayCounter >= motion.bufferSize ) {
 
 			// Tell the user what they did, track it, etc.
+
+//			$( '.knob' ).val( 10 ).trigger( 'change' );
+
 			console.log( motion.name );
-			motion.domCount.text( parseInt( motion.domCount.text() ) + 1 );
+			motion.domCount.val(parseInt( motion.domCount.val() ) + 1).trigger('change');
+            //motion.domCount.trigger('change');
 
 			checkMotion = false;
 
@@ -29,7 +34,7 @@ $( document ).ready( function( $ ) {
         motion.domThreshold = $( '#' + motion.name + ' .threshold');
         motion.domBuffer = $( '#' + motion.name + ' .buffer');
         motion.domScore = $( '#' + motion.name + ' .score');
-        motion.domCount = $( '#' + motion.name + ' .count');
+        motion.domCount = $( 'article.panel-' + motion.name + ' .knob');
 
         motion.domBuffer.text( motion.bufferSize );
         motion.domThreshold.text( motion.threshold );
@@ -42,17 +47,28 @@ $( document ).ready( function( $ ) {
 	socket.on( 'listen_response', function( data ) {
 		var kiwi_data = JSON.parse( data.message );
 		var dtw, total, thisMotion;
-//		console.log( kiwi_data );
+		//console.log( kiwi_data );
+
+        thisMotion = false;
 
         $.each(motionData, function(index, motion) {
-            if (motion.name == thingToCheck) {
-                thisMotion = motion;
-                return;
+            if (isis.donePanel) {
+                if (motion.name == 'tap') {
+                    thisMotion = motion;
+                }
+            } else {
+                if (motion.name == isis.activePanel) {
+                    thisMotion = motion;
+                    return;
+                }
             }
         });
 		//for ( var i = 0; i < motionData.length; i++ ) {
 
 		//	thisMotion = motionData[i];
+
+        if (!thisMotion)
+            return;
 
 			dtw = DTW( kiwi_data, thisMotion );
 			total = dtw.total;
