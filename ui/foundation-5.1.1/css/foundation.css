@@ -1120,7 +1120,7 @@ meta.foundation-mq-topbar {
       padding-right: 15px;
       padding-left: 15px; }
       .top-bar-section ul li > a.button:hover {
-        background: #ffb75a; }
+        background: #c03400; }
     .top-bar-section ul li > a.button.secondary {
       background: #e7e7e7; }
       .top-bar-section ul li > a.button.secondary:hover {
@@ -1463,7 +1463,7 @@ button, .button {
   font-size: 1rem;
   /*     @else                            { font-size: $padding - rem-calc(2); } */
   background-color: #008cba;
-  border-color: #007095;
+  border-color: #c03400;
   color: white;
   -webkit-transition: background-color 300ms ease-out;
   -moz-transition: background-color 300ms ease-out;
@@ -1474,7 +1474,7 @@ button, .button {
   border: none;
   font-weight: normal !important; }
   button:hover, button:focus, .button:hover, .button:focus {
-    background-color: #007095; }
+    background-color: #c03400; }
   button:hover, button:focus, .button:hover, .button:focus {
     color: white; }
   button.secondary, .button.secondary {
@@ -1540,14 +1540,14 @@ button, .button {
     border-radius: 1000px; }
   button.disabled, button[disabled], .button.disabled, .button[disabled] {
     background-color: #008cba;
-    border-color: #007095;
+    border-color: #c03400;
     color: white;
     cursor: default;
     opacity: 0.7;
     -webkit-box-shadow: none;
     box-shadow: none; }
     button.disabled:hover, button.disabled:focus, button[disabled]:hover, button[disabled]:focus, .button.disabled:hover, .button.disabled:focus, .button[disabled]:hover, .button[disabled]:focus {
-      background-color: #007095; }
+      background-color: #c03400; }
     button.disabled:hover, button.disabled:focus, button[disabled]:hover, button[disabled]:focus, .button.disabled:hover, .button.disabled:focus, .button[disabled]:hover, .button[disabled]:focus {
       color: white; }
     button.disabled:hover, button.disabled:focus, button[disabled]:hover, button[disabled]:focus, .button.disabled:hover, .button.disabled:focus, .button[disabled]:hover, .button[disabled]:focus {
