@@ -68,14 +68,17 @@
                 <h4 class="nav">Whisk</h4>
             </li>
             <li id="knead-nav">
-                <h4 class="nav">Mix &amp; Knead</h4>
+                <h4 class="nav">Knead &amp; Fold</h4>
             </li>
-            <li id="overnight-nav">
-                <h4 class="nav">Overnight</h4>
-            </li>
-            <li id="chop-nav">
-                <h4 class="nav">Shape &amp; Cut</h4>
-            </li>
+			<li id="chop-nav">
+				<h4 class="nav">Chop some Bacon</h4>
+			</li>
+			<li id="overnight-nav">
+				<h4 class="nav">Overnight</h4>
+			</li>
+			<li id="nextmorning-nav">
+				<h4 class="nav">Next Morning</h4>
+			</li>
             <li id="done-nav">
                 <h4 class="nav">Done!</h4>
             </li>
@@ -133,7 +136,7 @@
                 <div class="columns large-6">
                     <div class="cbp-ntcontent">
                         <ul class="cbp-ntsubaccordion">
-                            <li><a href="#start-whisking">Sift stuff now</a></li>
+                            <li><a href="#start-whisking">Sift 1/4 cup of the the flour into a large bowl.</a></li>
                         </ul>
                     </div>
                 </div>
@@ -183,9 +186,12 @@
                 <div class="columns large-6">
                     <div class="cbp-ntcontent">
                         <ul class="cbp-ntsubaccordion">
-                            <li><a href="#start-whisking">In a large bowl, whisk together the yeast and 1/4 cup of the flour</a></li>
+                            <li><a href="#start-whisking">Whisk together the yeast sifted flour</a></li>
                             <li><a href="#start-whisking">Whisk in the warm water until smooth</a></li>
                             <li><a href="#wait-uncover">Let the yeast slurry stand uncovered for 15 minutes</a></li>
+							<li><hr></li>
+							<li><a href="#whisk-to-dissolve">Whisk the 3 eggs, salt, oil and honey into the yeast slurry until the eggs are well incorporated and the salt has dissolved</a></li>
+							<li><a href="#whisk-to-dissolve">With a wooden spoon, stir in the remaining 3 1/4 cups flour all at once</a></li>
                         </ul>
                     </div>
                 </div>
@@ -235,12 +241,10 @@
         <div class="row">
             <div class="large-12 columns panel recipe-feature-text">
                 <div class="columns large-6">
-                    <h5 class="article-title">Mix &amp; Knead</h5>
+                    <h5 class="article-title">Knead &amp; Fold</h5>
                     <div class="cbp-ntcontent">
                         <ul class="cbp-ntsubaccordion">
-                            <li><a href="#whisk-to-dissolve">Whisk the 3 eggs, salt, oil and honey into the yeast slurry until the eggs are well incorporated and the salt has dissolved</a></li>
-                            <li><a href="#whisk-to-dissolve">With a wooden spoon, stir in the remaining 3 1/4 cups flour all at once</a></li>
-                            <li><a href="#shaggy-ball">When the mixture is a shaggy ball, scrape it out onto your work surface and knead for about 10 minutes</a></li>
+                            <li><a href="#shaggy-ball">When the mixture is a shaggy ball, scrape it out onto your work surface and knead the dough, folding it 10 times.</a></li>
                             <p>Note:</p>
                             <li>This dough is very firm – don’t worry if it’s cracked and hard to knead, it’ll work out</li>
                         </ul>
@@ -277,76 +281,86 @@
         </div>
     </article>
 
-    <article id="panel-overnight" class="article-background panel recipe-article-header-background panel-overnight">
-        <div class="row">
-            <div class="large-12 columns panel recipe-feature-text">
-                <h5 class="article-title">Overnight</h5>
-                <div class="cbp-ntcontent">
-                    <ul class="cbp-ntsubaccordion">
-                        <li><a href="#whisk-to-dissolve">Whisk the 3 eggs, salt, oil and honey into the yeast slurry until the eggs are well incorporated and the salt has dissolved</a></li>
-                        <li><a href="#whisk-to-dissolve">With a wooden spoon, stir in the remaining 3 1/4 cups flour all at once</a></li>
-                        <li><a href="#shaggy-ball">When the mixture is a shaggy ball, scrape it out onto your work surface and knead for about 10 minutes</a></li>
-                        <p>Note:</p>
-                        <li>This dough is very firm – don’t worry if it’s cracked and hard to knead, it’ll work out</li>
-                    </ul>
-                </div>
-                <a class="next" href="#">Next Step</a>
-            </div>
-        </div>
-    </article>
+	<article id="panel-chop" class="article-background panel recipe-article-header-background panel-chop">
+		<div class="row">
+			<div class="large-12 start columns">
+				Start Cutting!
+			</div>
+		</div>
+		<div class="row">
+			<div class="large-12 error columns">
+				Keep Cutting!
+			</div>
+		</div>
+		<div class="row">
+			<div class="large-12 columns panel recipe-feature-text">
+				<div class="columns large-6">
+					<h5 class="article-title">Chop some Bacon!</h5>
+					<div class="cbp-ntcontent">
+						<ul class="cbp-ntsubaccordion">
+							<li><a href="#two-inch-divide-by-three">Chop up some bacon and fry it for a tasty topping to sprinkle on the bread.</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="columns large-6">
+					<div class="knob-counter">
+						<input type="text"
+							   class="knob"
+							   data-width="200"
+							   data-height="200"
+							   data-displayInput=false
+							   data-displayPrevious=true
+							   value="0"
+							   data-min="0"
+							   data-max="15"
+							   data-thickness=".4"
+							   data-fgColor="#a62d00"
+							   data-bgColor="#ff9973"
+							   data-inputColor="#fff"
+							   data-readOnly=true
+							   data-stopper="true"
+							   data-step="1"
+							   data-font="Futura" >
+						<!-- ding sound when time is up -->
+					</div>
+				</div>
+				<a class="next" href="#">Next Step</a>
+			</div>
+		</div>
+	</article>
+
+	<article id="panel-overnight" class="article-background panel recipe-article-header-background panel-overnight">
+		<div class="row">
+			<div class="large-12 columns panel recipe-feature-text">
+				<h5 class="article-title">Overnight</h5>
+				<div class="cbp-ntcontent">
+					<ul class="cbp-ntsubaccordion">
+						<li><a href="#overnight">Place the dough in a deep, greased bowl and cover it with plastic wrap (don’t use a towel, it will just dry out). Let the dough rise overnight.</a></li>
+					</ul>
+				</div>
+				<a class="next" href="#">Next Step</a>
+			</div>
+		</div>
+	</article>
+
+	<article id="panel-nextmorning" class="article-background panel recipe-article-header-background panel-nextmorning">
+		<div class="row">
+			<div class="large-12 columns panel recipe-feature-text">
+				<h5 class="article-title">Next Morning</h5>
+				<div class="cbp-ntcontent">
+					<ul class="cbp-ntsubaccordion">
+						<li><a href="#overnight">The next morning, divide the dough into three equal parts (the shape will be prettier if the sections are as equal as possible). Roll each section out into a long strand, until it’s about 1.5 to 2 inches thick. Braid the dough the same way you braid hair. At each end of the braid, squish the three strands together to form a point, then fold it under the braid. Place on baking sheet. Note: The shape turns out better if you start braiding from the middle (braid half the normal way, starting from the middle of the strands, and then work backwards for the other half, braiding the opposite way – putting the strands under each other instead of over), but you might want to do it the normal way the first time.</a></li>
+						<li><a href="#overnight">Cover the loaf with plastic wrap and let proof about an hour total (the bread rises a lot in the oven, so don’t worry if it hasn’t risen much). After about half an hour, or 30 minutes before baking, preheat the oven to 325°F. Before you put the bread in the oven, beat the last egg with a pinch of salt for the glaze and brush it on. Sprinkle bacon on top.</a></li>
+						<li><a href="#overnight">Bake bread for about 45 minutes, until very well browned. Don’t be fooled if it looks ready after 30 minutes, because it has a tendency to have a doughy uncooked bit in the centre if you don’t bake it long enough. Place it on a rack to cool for a few minutes before serving.</a></li>
+					</ul>
+				</div>
+				<a class="next" href="#">Next Step</a>
+			</div>
+		</div>
+	</article>
 
 
-    <article id="panel-chop" class="article-background panel recipe-article-header-background panel-chop">
-        <div class="row">
-            <div class="large-12 start columns">
-                Start Cutting!
-            </div>
-        </div>
-        <div class="row">
-            <div class="large-12 error columns">
-                Keep Cutting!
-            </div>
-        </div>
-        <div class="row">
-            <div class="large-12 columns panel recipe-feature-text">
-                <div class="columns large-6">
-                    <h5 class="article-title">Shape &amp; Cut</h5>
-                    <div class="cbp-ntcontent">
-                        <ul class="cbp-ntsubaccordion">
-                            <p>Next morning:</p>
-                            <li><a href="#two-inch-divide-by-three">Divide the dough into three equal parts (the shape will be prettier if the sections are as equal as possible)</a></li>
-                            <li><a href="#two-inch-divide-by-three">Roll each section out into a long strand, until it’s about 1.5 to 2 inches thick, and chop</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="columns large-6">
-                    <div class="knob-counter">
-                        <input type="text"
-                               class="knob"
-                               data-width="200"
-                               data-height="200"
-                               data-displayInput=false
-                               data-displayPrevious=true
-                               value="0"
-                               data-min="0"
-                               data-max="15"
-                               data-thickness=".4"
-                               data-fgColor="#a62d00"
-                               data-bgColor="#ff9973"
-                               data-inputColor="#fff"
-                               data-readOnly=true
-                               data-stopper="true"
-                               data-step="1"
-                               data-font="Futura" >
-                        <!-- ding sound when time is up -->
-                    </div>
-                </div>
-                <a class="next" href="#">Done!</a>
-            </div>
-        </div>
-    </article>
-
-    <article id="panel-done" class="article-background panel recipe-article-header-background panel-done">
+	<article id="panel-done" class="article-background panel recipe-article-header-background panel-done">
         <div class="row">
             <div class="large-12 columns">
                 <div class="panel" class="recipe-feature-text">
