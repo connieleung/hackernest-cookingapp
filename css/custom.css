@@ -227,3 +227,37 @@ article {
 .baked-cooling-background {
 
 }
+
+canvas {
+display: block;
+}
+
+.knob-counter {
+	width: 200px;
+}
+
+.knob {
+	width: 104px !important;
+	height: 66px !important;
+	position: relative !important;
+	border: 0px !important;
+	background-image: none !important;
+	font-weight: bold !important;
+	font-style: normal !important;
+	font-variant: normal !important;
+	font-size: 56px !important;
+	line-height: normal !important;
+	font-family: Futura !important;
+	text-align: center !important;
+	padding: 0px !important;
+	-webkit-appearance: none !important;
+	background-position: initial !important;
+	background-repeat: initial !important;
+	background-color: transparent !important;
+	color: black !important;
+	box-shadow: none !important;
+	margin: auto !important;
+	white-space: normal !important;
+	margin-top: -1.7em !important;
+	padding-bottom: 2em !important;
+}
