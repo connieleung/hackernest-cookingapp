@@ -49,7 +49,7 @@ var motionData = [
 		threshold: 9,
 		bufferSize: 10,
 		greaterThan: true,
-		timeBetweenMotions: 0,
+		timeBetweenMotions: 400,
 		detectArrayCounter: 0,
         inputs: {
             sumA: [],

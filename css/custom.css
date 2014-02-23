@@ -71,8 +71,6 @@ article {
 
 .recipe-feature-text {
 	float: right;
-	padding: 10px;
-	margin-right: 10px;
 	bottom: 0;
 }
 
@@ -189,6 +187,15 @@ article {
 	list-style: none;
 }
 
+.panel {
+	padding: 0.35em 1.25rem;
+}
+
+.panel h5 {
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;
+}
+
 #cbp-ntaccordion > div.cooking-tools li:first-child {
 	margin-left: 0em;
 }
@@ -216,14 +223,69 @@ article {
 
 }
 
-.325F-preheat-background {
-
-}
-
-.45m-bake {
-
-}
-
 .baked-cooling-background {
 
+}
+
+canvas {
+display: block;
+}
+
+.knob-counter {
+	width: 200px;
+}
+
+.knob {
+	width: 104px !important;
+	height: 66px !important;
+	position: relative !important;
+	border: 0px !important;
+	background-image: none !important;
+	font-weight: bold !important;
+	font-style: normal !important;
+	font-variant: normal !important;
+	font-size: 56px !important;
+	line-height: normal !important;
+	font-family: Futura !important;
+	text-align: center !important;
+	padding: 0px !important;
+	-webkit-appearance: none !important;
+	background-position: initial !important;
+	background-repeat: initial !important;
+	background-color: transparent !important;
+	color: black !important;
+	box-shadow: none !important;
+	margin: auto !important;
+	white-space: normal !important;
+	margin-top: -1.7em !important;
+	padding-bottom: 2em !important;
+}
+
+/*-- Warning errors --*/
+
+.start {
+	height: 3em;
+	padding-top: 1em;
+	background-color: #95b13c;
+	color: white;
+	font-size: 1.2em;
+	font-weight: 600;
+	text-shadow: 1px 1px 2px rgba(0,0,0,0.25);
+	display: inline-block;
+	margin-right: 0;
+	margin-bottom: 0.5em;
+	border: 1px solid rgba(0,0,0,0.25);
+}
+
+.error {
+	height: 3em;
+	font-size: 1.2em;
+	padding-top: 1em;
+	background-color: #ef4731;
+	color: white;
+	font-weight: 600;
+	text-shadow: 1px 1px 2px rgba(0,0,0,0.25);
+	margin-bottom: 0.5em;
+	border: 1px solid rgba(0,0,0,0.25);
+	display:none;
 }
