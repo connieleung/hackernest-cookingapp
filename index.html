@@ -11,6 +11,8 @@
     <link rel="stylesheet" type="text/css" href="NestedAccordion/css/default.css" />
     <link rel="stylesheet" type="text/css" href="NestedAccordion/css/component.css" />
     <link rel="stylesheet" href="css/custom.css" />
+    <link rel="stylesheet" href="css/custom-two.css" />
+
 
     <script src="js/vendor/modernizr.js"></script>
 </head>
@@ -74,6 +76,9 @@
             <li id="chop-nav">
                 <h4 class="nav">Shape &amp; Cut</h4>
             </li>
+            <li id="done-nav">
+                <h4 class="nav">Done!</h4>
+            </li>
         </ul>
     </ul>
 </aside>
@@ -126,10 +131,6 @@
                     </div>
                     <div class="columns large-6">
                         <div class="knob-counter">
-                            <!-- See http://anthonyterrien.com/knob/ for more info -->
-                            <!-- need help! knob counter not working -->
-                            <!-- functions: tap counter to start, pause and stop -->
-                            <!-- pre-start counter time: 3s, task duration: 2m -->
                             <input type="text"
                                    class="knob"
                                    data-width="200"
@@ -184,16 +185,17 @@
                                    data-height="200"
                                    data-displayInput=false
                                    data-displayPrevious=true
-                                   value="35"
-                                   data-min="-3"
-                                   data-max="60"
+                                   value="0"
+                                   data-min="0"
+                                   data-max="10"
+                                   data-timer="7"
                                    data-thickness=".4"
                                    data-fgColor="#a62d00"
                                    data-bgColor="#ff9973"
                                    data-inputColor="#fff"
                                    data-readOnly=true
                                    data-stopper="true"
-                                   data-step="60"
+                                   data-step="1"
                                    data-font="Futura" >
                             <!-- ding sound when time is up -->
                         </div>
@@ -233,16 +235,16 @@
                                    data-height="200"
                                    data-displayInput=false
                                    data-displayPrevious=true
-                                   value="35"
-                                   data-min="-3"
-                                   data-max="60"
+                                   value="10"
+                                   data-min="0"
+                                   data-max="10"
                                    data-thickness=".4"
                                    data-fgColor="#a62d00"
                                    data-bgColor="#ff9973"
                                    data-inputColor="#fff"
                                    data-readOnly=true
                                    data-stopper="true"
-                                   data-step="60"
+                                   data-step="1"
                                    data-font="Futura" >
                             <!-- ding sound when time is up -->
                         </div>
@@ -291,19 +293,15 @@
                     </div>
                     <div class="columns large-6">
                         <div class="knob-counter">
-                            <!-- See http://anthonyterrien.com/knob/ for more info -->
-                            <!-- need help! knob counter not working -->
-                            <!-- functions: tap counter to start, pause and stop -->
-                            <!-- pre-start counter time: 3s, task duration: 2m -->
                             <input type="text"
                                    class="knob"
                                    data-width="200"
                                    data-height="200"
                                    data-displayInput=false
                                    data-displayPrevious=true
-                                   value="35"
-                                   data-min="-3"
-                                   data-max="60"
+                                   value="0"
+                                   data-min="0"
+                                   data-max="15"
                                    data-thickness=".4"
                                    data-fgColor="#a62d00"
                                    data-bgColor="#ff9973"
@@ -315,12 +313,26 @@
                             <!-- ding sound when time is up -->
                         </div>
                     </div>
-                    <a class="next" href="#">Next Step</a>
+                    <a class="next" href="#">Done!</a>
                 </div>
             </div>
         </div>
     </article>
 
+    <article id="panel-done" class="article-background panel recipe-article-header-background panel-done">
+        <div class="row">
+            <div class="large-12 columns">
+                <div class="panel" class="recipe-feature-text">
+                    <div class="columns large-12">
+                        <div class="knob-counter">
+                            PICTURE OF CHALLAH HOLLA
+                            <!-- ding sound when time is up -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
 
 
 </div>

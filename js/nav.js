@@ -2,6 +2,7 @@ var isis = isis || {};
 
 isis.activePanel = 'ingredients';
 isis.donePanel = true;
+isis.lastActionAt = 0;
 
 $( document ).ready( function( $ ) {
     $('article.panel').hide();
@@ -12,8 +13,12 @@ $( document ).ready( function( $ ) {
 
         if (panelId != 'ingredients')
             isis.donePanel = false;
-        else
-            isis.donePanel = true;
+        else {
+            if ($('article.panel-' + panelID + ' input.knob').length == 0)
+                isis.donePanel = false;
+            else
+                isis.donePanel = true;
+        }
 
         isis.activePanel = panelId;
         $('h4.nav').removeClass('selected');
