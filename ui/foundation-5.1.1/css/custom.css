@@ -3,6 +3,7 @@
 
 article {
 	height: 700px;
+	padding: 10px;
 }
 
  .uppercase {
@@ -10,13 +11,6 @@ article {
 }
 
 
-
-.knob-counter {
-	background: url('img/knob.png');
-	background-size: 300%;
-	background-position: center center;
-	background-repeat: no-repeat;
-}
 
 
 /* NestedAccordion Side Menu*/
@@ -29,3 +23,25 @@ article {
 	color: gray;
 }
 
+.knob-counter {
+	background-image: url('img/knob.png');
+	background-size: 100%;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+.article-background {
+	background-position: top center;
+	background-repeat: repeat;
+	background-size: 500px 700px;
+}
+
+#ingredients-panel-background {
+	background: url('http://placehold.it/300&text=[Ingredients]');
+}
+#recipe-article-header-background {
+	background: url('http://placehold.it/300&text=[]');
+}
+#cover-up-background {
+	background: url('http://placehold.it/300&text==[Cover-Up Now]');
+}
